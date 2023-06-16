@@ -1,0 +1,275 @@
+@import "./global";
+
+.about-main{
+    padding: $xll 0;
+    .about-main_left{
+        width: 50%;
+        padding-left:$xll;
+            p{
+                margin: $xl-1 0;
+                color: $muted;
+            }
+     }
+     .about-main_right{
+        img{
+            width: 100%;
+        }
+    } 
+}
+
+.about-statistics{
+    padding: $xll 0;
+    .about-st_left{
+        width: 70%;
+        .play{
+            margin: $sm;
+            border: none;
+            background-color: inherit;
+            transition: all .3s;
+            &:hover{
+              transform: scale(1.2);
+              border: 1px solid $primary;
+            }
+          }
+        img{
+            width: 100%;
+        }
+    }
+    .about-st_right{
+        .about-list{
+            li{
+                display: flex;
+                align-items: center;
+                margin: $xl-4;
+                font-size:$xl-1;
+                font-weight: 700;
+                color: $text-color;
+                b{
+                    margin-right: 5px;
+                    font-size: $xl-4;
+                    color:$primary;
+                }
+            }
+        }
+    }
+}
+
+.values{
+    padding: $xll 0;
+    text-align: center;
+    .value{
+        padding: $xl-2;
+        @include flex(column, space-between);
+        align-items: center;
+        img{
+            width: 10%;
+        }
+        b{
+            margin: $sm 0;
+        }
+    }
+    .vertical-line{
+        width: 1px;
+        height: 80%;
+        background-color: #DADBDD;
+        
+    }
+}
+.about-cards{
+    padding: $xll 0;
+    .head{
+        text-align: center;
+    }
+    .cards-wrap{
+        @include grid(repeat(3, 1fr), $xl-3);
+        .card{
+            border: 1px solid $secondary;
+            border-radius: 4px;
+            box-shadow: $shadow;
+            img{
+                width: 100%;
+            }
+            .card_text{
+                padding: $xl-2;
+                p{
+                    margin: $sm 0;
+                }
+                button{
+                    border: none;
+                    border-radius: 4px;
+                    padding: 5px;
+                    color: $white;
+                    background-color: #03CEA4;
+                }
+                .btn_management{
+                    background-color:#5A87FC;
+                }
+                .btn_design{
+                    background-color: $primary;
+                }
+                .btn_hr{
+                    background-color: #F89828;
+                }
+                .btn_dev{
+                    background-color: #5A87FC;
+                }
+                b:hover{
+                    color: $primary;
+                }
+            }
+        }
+        .card:last-child{
+            background-color: #f4f5f7;
+            padding: 124px $xll-1;
+            text-align: center;
+        }
+    }
+}
+
+
+.process{
+    padding: $xll-1 0;
+    .process-content{
+        width: 50%;
+        .step{
+            padding: $xl-1;
+            color: $text-color;
+            border-left: 1px solid $muted;
+            position: relative;
+            h4{
+                margin: $sm 0;
+            }
+            .circle{
+                width: $sm;
+                height: $sm;
+                background-color: $primary;
+                border-radius: 50%;
+                position: absolute;
+                left:-1%;
+                top: 0;
+            }
+        }
+    }
+    .process-img{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.team{
+    text-align: center;
+    padding: $xll 0;
+    .team-grid{
+        @include grid(repeat(4, 1fr), $xl-3);
+        .team-grid_item{
+            .team_img{
+                padding: 10px 10px 0 10px;
+                position: relative;
+                background-color: #FFCF2D;
+
+                img{
+                    vertical-align: bottom;
+                    width: 100%;
+                }
+
+                .cosial{
+                     display: none;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    transition: display .9s;
+                    background: linear-gradient(180deg, rgba(30, 33, 44, 0) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.768225) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%);
+                    .icons{
+                       position: absolute;
+                       right: 5%;
+                       bottom: 5%;
+                    }
+                }
+             }
+             .team_img:hover .cosial{
+                 display: block;
+             }
+        }
+    }
+}
+
+@media (max-width:992px){
+    .about-main{
+        .about-main_left{
+            padding-left:$xl-4;
+        }
+    }
+    .about-statistics{
+        .about-st_left{
+            width: 60%;
+        }
+        .about-st_right{
+            .about-list{
+                li{
+                    margin: $xl-2;
+                    font-weight: 400;
+                    b{
+                        font-size: $xl-2;
+                        color:$primary;
+                    }
+                }
+            }
+        }
+    }
+    .team{
+        .team-grid{
+            @include grid(repeat(3, 1fr), $xl-2);
+        }
+    }
+}
+
+
+@media (max-width:767px){
+    .about-main{
+        .about-main_left{
+           width: 90%;
+           margin-bottom:$xll ;
+        }
+    }
+    .about-statistics{
+        padding: $xl-1;
+        .about-st_left{
+            width: 90%;
+        }
+    }
+    .about-cards{
+        .cards-wrap{
+            @include grid(repeat(2, 1fr), $xl-1)
+        }
+    }
+    .process{
+        .process-content{
+            width: 100%;
+            margin: $xl-1 0;
+            .step{
+                padding:$md;
+            }
+        }
+    }
+    .team{
+        .team-grid{
+            @include grid(repeat(2, 1fr), $xl-1);
+        }
+    }
+}
+
+@media(max-width:576px){
+    .about-cards{
+        .cards-wrap{
+            @include grid(repeat(1, 1fr), $xl-1)
+        }
+    }
+    .team{
+        .team-grid{
+            @include grid(repeat(1, 1fr), $xl-1);
+        }
+    }
+}

@@ -1,0 +1,671 @@
+@import "./global";
+@import "./courses";
+@import "./about";
+
+
+.header{
+  padding: $xl-4 0;
+  .logo{
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .navbar{
+    .navbar_item{
+      position: relative;
+      display: inline-block;
+      margin-right:$xl-4;
+      font-weight: 700;
+      color: $text-color;
+      text-decoration: none;
+      transition: all .3s;
+      &::after{
+        content: "";
+        width:0;
+        height: 2px;
+        background-color:$primary;
+        position: absolute;
+        left: 0;
+        top: $xl-2;
+        transition: width .3s;
+      }
+      &:hover{
+        color: $primary;
+        &::after{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .like_button{
+    margin-right: $sm;
+  }
+  .header_buttons__btn{
+    padding: 0;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    &:hover{
+      color: $primary;
+    }
+  }
+  .hamMenu{
+    border: 2px solid $primary;
+    border-radius: 4px;
+    display: none;
+    font-size: 25px;
+    background-color: inherit;
+  }
+}
+ .background{
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+}
+  .main{
+    padding: $xll-1 0;
+    .main-left{
+      padding-right:$xll-2;
+      .play{
+        border: none;
+        background-color: inherit;
+        transition: all .3s;
+        &:hover{
+          transform: scale(1.2);
+          border: 1px solid $primary;
+        }
+      }
+      .main-left_title{
+        margin-bottom:$xl-5;
+        font-size: $xll;
+        }
+      }
+    }
+  
+  .statistics{
+    padding: $xll 0;
+    .dotted{
+      width: 8px;
+      height: 8px;
+      background-color: $primary;
+      border-radius: 50%;
+    }
+    .statistics-item{
+      color: $text-color;
+      .statistics-item_count{
+        font-size: $xl-5;
+        margin-right: 5px;
+      }
+    }
+  }
+
+
+
+.about{
+  padding: $xll-1 0;
+  .about-img{
+    img{
+      width: 100%;
+    }
+  }
+  .about-content{
+    margin-left: $xll-1;
+    .about_list{
+      margin-bottom: $xl-4;
+      .about_list__item{
+        margin-bottom: $sm;
+        line-height: 160%;
+        display: flex;
+        align-items: flex-start;
+        img{
+          margin: 5px 5px 5px 0;
+        }
+      }
+    }
+  }
+}
+
+// section{
+//   background-color: $secondary;
+// }
+
+.courses{
+  .grid{
+    @include grid(repeat(2, 1fr), 30px);
+    .course-card{
+      box-shadow: $shadow;
+      .course-card_content{
+        padding: $xl-4;
+        @include flex(column,space-between);
+        .course-card_button{
+          width: $xll-1;
+          background-color: #03CEA4;
+          color: $white;
+          border: none;
+          border-radius: 4px;
+          margin-bottom: $xl-2;
+        }
+        .course-card_desc{
+          font-size: $xl-2;
+        }
+        .course-card_footer{
+          margin-top: $xl-2;
+          span :nth-child(2){
+            font-size: $xl-2;
+            color:  #787A80;
+          }
+        }
+      }
+    }
+     
+  }
+}
+
+.section{
+  padding: $xll-2;
+  h2, .desc_text{
+    text-align: center;
+  }
+  .flex{
+    margin: $xll-1 0;
+    .section_left{
+      padding-right: $xll-1;
+        h3{
+          font-size: $xl-3;
+          color: $text-color;
+        }
+        p{
+          color:  #424551;
+          line-height: 158%;
+        }
+      }
+    }
+  }
+
+ .events{
+    background:$gradient1;
+    padding: $xll 0;
+    .title, .desc_text{
+      text-align: center;
+    }
+    .events-item{
+      display: flex;
+      align-items: center;
+      background-color: $white;
+      margin: $xl-1;
+      padding: $xl-3 $xl-4;
+      .event_text{
+        margin-left: $xll;
+      }
+      .price{
+        margin-right: $sm;
+      }
+      .btn{
+        margin-left: auto;
+      }
+      .btn:hover{
+        background: $gradient;
+        cursor: pointer;
+      }
+    }
+    .events_bottom{
+      margin-top: $xll;
+      text-align: center;
+      .like_button{
+        margin-left: $sm;
+      }
+    }
+ } 
+
+.wrapper{
+  padding: $xll;
+  position: relative;
+  .content{
+    width: 35%;
+    .logos{
+      margin-top: $xll;
+    }
+  }
+  .certificat{
+    position: absolute;
+    right: 0;
+    top: 7%;
+  }
+}
+
+.carousels{
+  background-color: #F4F5F6;
+  padding:$xll-1;
+  .first-carousel{
+    margin-bottom: $xll;
+  .title{
+    margin-bottom: $xl-5;
+  }
+  .carousel-card{
+    img{
+      background-color: #FFCF2D;
+    }
+    b{
+      display: block;
+    }
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after{
+    content: unset;
+  }
+  .arrow-left{
+    margin-right: $md;
+    top: 15%;
+    left: 85%;
+    border-radius: 50%;
+    padding: 0 $xl-1;
+  }
+  .arrow-right{
+    top:15%;
+    right: 5%;
+    border-radius: 50%;
+    padding: 0 $xl-1;
+  }
+  .arrow-left:hover,
+  .arrow-right:hover{
+    background-color: $primary;
+    color: white;
+  }
+}
+}
+  .carousel-testimonial{
+    text-align: center;
+    background-color: #F4F5F6;
+    padding: $xl-3 $xll-2 !important;
+    .swiper-button-prev, .swiper-button-next {
+      color: #000000;
+      top: 60%;
+      border-radius: 50%;
+      padding: 0 $xl-2;
+
+      &:after {
+        content: unset;
+      }
+
+      &:hover {
+        background-color: $primary;
+        color: #fff;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 0;
+    }
+
+    .swiper-button-next {
+      right: 0;
+    }
+
+  .testimonial{
+    background-color: $white;
+    width: 80%;
+    margin: $xl-5 auto;
+    border-radius: 4px;
+    padding: $xll;
+    text-align: left;
+    .testimonial_text{
+      align-items: flex-start;
+    }
+    .user{
+      margin-top: $sm;
+       justify-content: flex-start;
+      .user-name{
+        margin: 0 $sm;
+      }
+    }
+  }
+ 
+}
+
+.blog{
+  padding: $xll-2 0;
+  .blog_cards{
+    @include grid(repeat(3, 1fr), $xl-2);
+    .blog_card{
+      position: relative;
+      img{
+        width: 100%;
+        transition: transform .3s;
+        &:hover{
+          transform: translateY(-5px);
+        }
+      }
+      .blog_card_btn{
+        background-color: $white;
+        border-radius: 4px;
+        border: none;
+        position: absolute;
+        left: $sm;
+        top: $sm;
+      }
+      .blog_card_data{
+        margin: $md 0;
+      }
+      .blog_card_title{
+        font-size: $xl-2;
+        line-height: 150%;
+        color: $text-color;
+      }
+      .blog_card_link{
+        border: none;
+        background-color: inherit;
+        margin-top: $xl-2;
+      }
+    }
+  }
+} 
+
+.contact{
+  background-image: $gradient1;
+  text-align: center;
+  padding-top: $xll;
+  .contact_head{
+    width: 50%;
+    margin: 0 auto;
+    @media (max-width:700px){
+      width: 80%;
+    }
+  }
+  .contact_form{
+    padding: $xl-5;
+    @media (max-width:700px){
+     display: flex;
+     flex-direction: column;
+     .my_input{
+      width: 100%;
+      margin-bottom: 5px;
+     } 
+    }
+  }
+}
+
+.footer{
+  padding:$xll  0;
+  background-color: $text-color;
+  color:$white;
+  a{
+    color: $white;
+    &:hover{
+      color: $primary;
+    }
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: $md;
+    opacity: .6;
+  }
+  .flex{
+    align-items: flex-start;
+    .f_text{
+      width: 25%;
+    }
+    .f_form{
+      width: 25%;
+      @media (max-width:700px){
+        display: flex;
+        flex-direction:column;
+      }
+      .my_input{
+        background-color:  rgba(255, 255, 255, 0.12);
+        margin-bottom: $md;
+        @media (max-width:700px){
+          width: 100%;
+        }
+      }
+      &_button{
+      padding: $md;
+        background-color:  rgba(255, 255, 255, 0.12);
+        border: none;
+        color: $white;
+      }
+    }
+    .f_list{
+      li{
+        margin-bottom: $xl-1;
+       
+      }
+    }
+  }
+ 
+}
+
+
+@media (max-width:996px){
+ .header{
+  .navbar{
+    .navbar_item{
+      margin-right: $xl-1;
+    }
+  }
+ }
+ 
+  .main{
+    padding: $xll 0;
+    img{
+      width: 100%;
+    }
+    .main-left{
+      padding-right:$xl-3;
+      .main-left_title{
+        margin-bottom:$xl-5;
+        font-size: $xll;
+        }
+      }
+    }
+  }
+  
+ .section{
+   padding: $xl-3 $xl-1;
+  .flex{
+  img{
+    width: 100%;
+  }
+  .section_left{
+     width: 50%;
+     padding-right: $sm;
+  }
+}
+.section_items{
+  width: 80%;
+}
+
+ }
+ .wrapper{
+  // padding: $xl-3;
+  .certificat{
+    position: static;
+    margin: $xl-4 0;
+    img{
+      width: 100%;
+    }
+  }
+  .content{
+    width: 60%;
+  }
+ }
+
+
+
+
+@media (max-width:767px){
+  .header{
+  .navbar{
+    height: 90vh;
+    display: none;
+    background-color: $white;
+    position: fixed;
+    left: 0;
+    top: $xl-1;
+    .navbar_item{
+      display: block;
+      margin: $xl-2;
+      font-size: $xl-2;
+    }
+  }
+  .hamMenu{
+    display: block;
+  }
+}
+
+
+.about{
+  .about-content{
+    margin-left: $xl-2;
+  }
+}
+  .courses{
+    .grid{
+      @include grid(repeat(1, 1fr), $xl-1);
+      margin: $xl-1 0;
+      
+    }
+  }
+  .carousels{
+    padding: $xl-1;
+  }
+
+  .carousel-testimonial{
+    .flex{
+      flex-wrap: nowrap;
+    }
+  }
+  
+  .blog{
+    .blog_cards{
+      @include grid(repeat(2, 1fr), $md);
+      .blog_card{
+        .blog_card_title{
+          font-size: $xl-1;
+          line-height: 150%;
+          color: $text-color;
+        }
+        p{
+          width: 80%;
+        }
+      }
+    }
+  } 
+  .contact{
+    .flex{
+      flex-wrap: nowrap;
+      img{
+        // width: 50%;
+        display: none;
+      }
+    }
+  }
+  .footer{
+    .flex{
+     .f_list:nth-child(4){
+      width: 40%;
+     }
+    }
+  }
+}
+
+@media(max-width:576px){
+  .header{
+    .logo{
+      margin-bottom: $sm;
+    }
+    .hamMenu{
+      position: absolute;
+      top: $md;
+      right: $sm;
+    }
+    
+  }
+  
+    .main{
+      .main-left{
+        padding-right:$xll;
+        .main-left_title{
+          font-size: $xl-4;
+          }
+        }
+      }
+    
+  .statistics{
+    flex-direction: column;
+    padding: $xll 0;
+    .dotted{
+      display: none;
+    }
+    .statistics-item{
+      margin-bottom: 5px;
+      .statistics-item_count{
+        font-size: $xl-3;
+        margin-right: 5px;
+      }
+    }
+  }
+  .section{
+    .flex{
+      margin: $xl-3 0;
+      .section_left{
+        width: 90%;
+      }
+    }
+    .section_items{
+      div{
+        margin: $sm;
+      }
+    }
+  }
+  .events{
+    .events-item{
+      flex-direction: column;
+      padding: $xl-1 $md;
+      align-items: start;
+      .event_text{
+        margin-left: 0;
+      }
+    }
+  }
+  .wrapper{
+    padding: $xl-5;
+    .content{
+      width: 100%;
+    }
+  }
+  .carousels{
+    .first-carousel{
+      .arrow-left{
+        left: 65%;
+      }
+    }
+  }
+ 
+
+  .blog{
+    padding: $md 0;
+    .blog_cards{
+      @include grid(repeat(1, 1fr), $sm);
+    }
+  }
+  .contact{
+    .contact_head{
+      width: 80%;
+    }
+  }
+  .footer{
+    .flex{
+      .f_text{
+        width: 45%;
+        h1{
+          font-size: $xl-1;
+        }
+      }
+      .f_form{
+        width: 50%;
+      }
+    }
+    .f_list:nth-child(4){
+      width: 50%;
+     }
+  }
+}

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="background">
+        <header class="header">
+            <div class="container">
+            <div class="flex">
+                <div class="logo"> 
+                <img src="images/logo1.png" alt="logo">
+                <img src="images/logo.png" alt="logo">
+                </div>
+                <nav class="navbar">
+                    <a href="pages/about.html" class="navbar_item">About Us</a>
+                    <a href="pages/courses.html"  class="navbar_item">Courses</a>
+                    <a href=""  class="navbar_item">Events</a>
+                    <a href=""  class="navbar_item">Blog</a>
+                    <a href=""  class="navbar_item">Contacts</a>
+                </nav>
+                <div class="header_buttons">
+                    <button class="like_button">Get consultation</button>
+                        <button class="header_buttons__btn" title="Sign in" onclick="opened(login)"><i class="bi bi-person" style="font-size: 1.5rem;"></i> login /</button>
+                        <button class="header_buttons__btn" title="Sign up" onclick="opened(modal)">Registr</button> 
+                </div>
+                <button class="hamMenu"> <i class="bi bi-list" style="font-size: 20px;"></i></button>
+            </div>
+        </div> 
+        </header> 
+     <main>
+        <div class="main container flex">
+            <div class="main-left">
+                <button class="play flex">
+                    <i class="bi bi-play-circle-fill" style="font-size: 1.5rem; color: red;"></i>
+                    <span>Play showreel</span>
+                </button>
+             <h1 class="main-left_title">Enjoy studying
+                with Createx Online Courses</h1>
+                <button class="btn">About us</button>
+                <button class="like_button">Explore courses</button>   
+            </div>
+            <div class="main_right">
+                <img src="images/illystrasion1.png" alt="">
+            </div>
+        </div>
+        <div class="statistics flex container">
+            <div class="statistics-item flex"><b class="statistics-item_count">1200</b> <span>Students graduated</span></div>
+            <div class="dotted"></div>
+            <div class="statistics-item flex"> <b class="statistics-item_count">84</b> <span>Completed courses</span></div>
+            <div class="dotted"></div>
+            <div class="statistics-item flex"> <b class="statistics-item_count">16</b> <span>Qualified tutors</span></div>
+            <div class="dotted"></div>
+            <div class="statistics-item flex"> <b class="statistics-item_count">5</b> <span>Years of experience</span></div>
+        </div>
+    </main>
+</div>
+    <section>
+        <div class="about container flex">
+            <div class="about-img"><img src="images/image1.png" alt=""></div>
+            <div class="about-content">
+                <p class="desc_text">Who we are</p>
+                <h2 class="title">Why Createx?</h2>
+                <ul class="about_list">
+                    <li class="about_list__item">
+                        <img src="images/checked.png" alt="">
+                        <span>fermentum in morbi pretium aliquam adipiscing donec tempus.</span>
+                    </li>
+                    <li class="about_list__item">
+                        <img src="images/checked.png" alt="">
+                       <span> Vulputate placerat amet pulvinar lorem nisl.</span>
+                    </li>
+                    <li class="about_list__item">
+                        <img src="images/checked.png" alt="">
+                        <span>Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.</span></li>
+                    <li class="about_list__item">
+                        <img src="images/checked.png" alt="">
+                        Etiam duis lobortis in fames ultrices commodo nibh.</li>
+                    <li class="about_list__item">
+                        <img src="images/checked.png" alt="">
+                        Tincidunt sagittis neque sem ac eget.</li>
+                    <li class="about_list__item">
+                        <img src="images/checked.png" alt="">
+                        Ultricies amet justo et eget quisque purus vulputate dapibus tortor.</li>
+                </ul>
+                <button class="like_button">More about us</button>
+            </div>
+        </div>
+        <div class="container courses">
+            <p class="desc_text">Ready to learn?</p>
+            <div class="flex">
+                <h2 class="title">Featured Courses</h2>
+                <button class="btn">View all courses</button>
+            </div>
+            <div class="grid">
+                <div class="course-card flex">
+                    <div><img src="images/cardimg.png" alt=""></div>
+                    <div class="course-card_content">
+                        <button class="course-card_button">Marketing</button>
+                        <b class="course-card_desc">The Ultimate Google Ads Training Course</b>
+                        <div  class="course-card_footer">
+                                <span class="price">$100</span>
+                                <span>| by Jerome Bell</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card flex">
+                    <div><img src="images/cardimg.png" alt=""></div>
+                    <div class="course-card_content">
+                        <button class="course-card_button">Marketing</button>
+                        <b class="course-card_desc">The Ultimate Google Ads Training Course</b>
+                        <div  class="course-card_footer">
+                            <span class="price">$100</span>
+                            <span>| by Jerome Bell</span>
+                        </div>
+                    </div>   
+                </div>
+                <div class="course-card flex">
+                    <div><img src="images/cardimg.png" alt=""></div>
+                    <div class="course-card_content">
+                        <button class="course-card_button">Marketing</button>
+                        <b class="course-card_desc">The Ultimate Google Ads Training Course</b>
+                        <div  class="course-card_footer">
+                            <span class="price">$100</span>
+                            <span>| by Jerome Bell</span>
+                        </div>
+                    </div>    
+                </div>
+                <div class="course-card flex">
+                    <div><img src="images/cardimg.png" alt=""></div>
+                    <div class="course-card_content">
+                        <button class="course-card_button">Marketing</button>
+                        <b class="course-card_desc">The Ultimate Google Ads Training Course</b>
+                        <div  class="course-card_footer">
+                            <span class="price">$100</span>
+                            <span>| by Jerome Bell</span>
+                        </div>
+                </div>
+            </div>
+            <div class="course-card flex">
+                <div><img src="images/cardimg.png" alt=""></div>
+                <div class="course-card_content">
+                    <button class="course-card_button">Marketing</button>
+                    <b class="course-card_desc">The Ultimate Google Ads Training Course</b>
+                    <div  class="course-card_footer">
+                        <span class="price">$100</span>
+                        <span>| by Jerome Bell</span>
+                    </div>
+                    </div>
+                </div>
+                <div class="course-card flex">
+                    <div><img src="images/cardimg.png" alt=""></div>
+                    <div class="course-card_content">
+                        <button class="course-card_button">Marketing</button>
+                        <b class="course-card_desc">The Ultimate Google Ads Training Course</b>
+                        <div class="course-card_footer">
+                            <span class="price">$100</span>
+                            <span>| by Jerome Bell</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section container">
+            <p class="desc_text">Our benefits</p>
+            <h2 class="title">That’s how we do it</h2>
+            <div class="flex section_items">
+                <div><button class="btn"> <i class="bi bi-star" style="color: red;"></i>Experienced Tutors</button></div>
+                <div><i class="bi bi-hand-thumbs-up"></i> <span>Feedback & Support</span></div>
+                <div><i class="bi bi-collection"></i> <span>24/7 Online Library</span></div>
+                <div><i class="bi bi-chat"></i> <span>Community</span></div>
+            </div>
+            <div class="flex">
+                <div class="section_left">
+                    <h3>Only practicing tutors</h3>
+                    <p>Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.</p>
+                </div>
+                <div class="section_right"><img src="images/illustration2.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+     <div class="events">
+        <div class="container">
+            <p class="desc_text">Our Events</p>
+            <h2 class="title">Lectures & workshops</h2>
+            <div class="events-item">
+                <div class="flex">
+                <div class="price">05</div>
+                <div>
+                    <b>August</b>
+                    <p>11:00-14:00</p>
+                </div>
+            </div>
+                <div class="event_text">
+                    <b>Formation of the organizational structure of the company in the face of uncertainty.</b>
+                    <p>Onine master-class</p>
+                </div>
+                <button class="btn">View more</button>
+            </div>
+            <div class="events-item">
+                <div class="flex">
+                    <div class="price">24</div>
+                    <div>
+                        <b>jule</b>
+                        <p>11:00-12:30</p>
+                    </div>
+                </div>
+                <div class="event_text">
+                    <b>Building a customer service department. Best Practices.</b>
+                    <p>Onine lecture</p>
+                </div>
+                <button class="btn">View more</button>
+            </div>
+            <div class="events-item">
+                <div class="flex">
+                <div class="price">16</div>
+                <div>
+                    <b>jule</b>
+                    <p>10:00-13:00</p>
+                </div>
+            </div>
+                <div class="event_text">
+                    <b>How to apply methods of speculative design in practice. Worldbuilding prototyping.</b>
+                    <p>Onine workshop</p>
+                </div>
+                <button class="btn">View more</button>
+            </div>
+            <div class="events_bottom">
+                <strong>Do you want more?</strong>
+                <button class="like_button">Explore all events</button>
+            </div>
+        </div>
+    </div> 
+    <div class="wrapper container">
+        <div class="content">
+            <p class="desc_text">Createx Certificate</p>
+            <h2 class="title">Your expertise will be confirmed</h2>
+            <p>We are accredited by international professional organizations and institutes:We are accredited by international professional organizations and institutes:</p>
+            <div class="logos">
+                <img src="images/logo3.png" alt="">
+                <img src="images/logo4.png" alt="">
+                <img src="images/logo5.png" alt="">
+            </div>
+        </div>
+        <div class="certificat"><img src="images/certificaat.png" alt=""></div>
+    </div>
+    <div class="carousels">
+            <div class="container">
+                <div class="first-carousel swiper">
+                    <p class="desc_text">Best tutors are all here</p>
+                    <h2 class="title">Meet our team</h2>
+                    <div class="swiper-wrapper">
+                        <div class="carousel-card swiper-slide">
+                            <img src="images/image2.png" alt="">
+                            <b>Dianne Russell</b>
+                            <p>Founder and CEO</p>
+                        </div>
+                        <div class="carousel-card swiper-slide">
+                            <img src="images/image3.png" alt="">
+                            <b>Dianne Russell</b>
+                            <p>Founder and CEO</p>
+                        </div>
+                        <div class="carousel-card swiper-slide">
+                            <img src="images/image2.png" alt="">
+                            <b>Dianne Russell</b>
+                            <p>Founder and CEO</p>
+                        </div>
+                        <div class="carousel-card swiper-slide">
+                            <img src="images/image3.png" alt="">
+                            <b>Dianne Russell</b>
+                            <p>Founder and CEO</p>
+                        </div>
+                        <div class="carousel-card swiper-slide">
+                            <img src="images/image3.png" alt="">
+                            <b>Dianne Russell</b>
+                            <p>Founder and CEO</p>
+                        </div>
+                        <div class="carousel-card swiper-slide">
+                            <img src="images/image3.png" alt="">
+                            <b>Dianne Russell</b>
+                            <p>Founder and CEO</p>
+                        </div>
+                        <div class="carousel-card swiper-slide">
+                            <img src="images/image2.png" alt="">
+                            <b>Dianne Russell</b>
+                            <p>Founder and CEO</p>
+                        </div>
+                        <div class="carousel-card swiper-slide">
+                            <img src="images/image3.png" alt="">
+                            <b>Dianne Russell</b>
+                            <p>Founder and CEO</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev arrow-left"><i class="bi bi-arrow-left"></i></div>
+                    <div class="swiper-button-next arrow-right"><i class="bi bi-arrow-right"></i></div>
+                </div>
+                <div class="carousel-testimonial swiper">
+                    <p class="desc_text">TESTIMONIALS</p>
+                    <h2 class="title">What our students say</h2>
+                    <div class="swiper-wrapper">
+                        <div class="testimonial swiper-slide">
+                                <div class="testimonial_text flex">
+                                    <i class="bi bi-quote" style="font-size:25px;"></i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+                                </div>
+                                <div class="user flex">
+                                    <img src="images/user.png" alt="">
+                                    <div class="user-name">
+                                        <p>Eleanor Pena</p>
+                                        <span class="span">Position, Course</span>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                        <div class="testimonial swiper-slide">
+                            <div class="testimonial_text flex">
+                                <i class="bi bi-quote" style="font-size:25px;"></i>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+                            </div>
+                            <div class="user flex">
+                                <img src="images/user.png" alt="">
+                                <div class="user-name">
+                                    <p>Eleanor Pena</p>
+                                    <span class="span">Position, Course</span>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        <div class="testimonial swiper-slide">
+                            <div class="testimonial_text flex">
+                                <i class="bi bi-quote" style="font-size:25px;"></i>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+                            </div>
+                            <div class="user flex">
+                                <img src="images/user.png" alt="">
+                                <div class="user-name">
+                                    <p>Eleanor Pena</p>
+                                    <span class="span">Position, Course</span>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        <div class="testimonial swiper-slide">
+                            <div class="testimonial_text flex">
+                                <i class="bi bi-quote" style="font-size:25px;"></i>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+                            </div>
+                            <div class="user flex">
+                                <img src="images/user.png" alt="">
+                                <div class="user-name">
+                                    <p>Eleanor Pena</p>
+                                    <span class="span">Position, Course</span>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"><i class="bi bi-arrow-left"></i></div>
+                    <div class="swiper-button-next"><i class="bi bi-arrow-right"></i></div>
+                </div>
+            </div>
+    </div>
+    <div class="blog container">
+        <p class="desc_text">Our blog</p>
+        <h2 class="title">Latest posts</h2>
+        <div class="blog_cards">
+            <div class="blog_card">
+                <div><img src="images/image4.png" alt=""></div>
+                <div class="blog_card_body">
+                    <button class="blog_card_btn"><i class="bi bi-mic"></i> Podcast</button>
+                    <div class="blog_card_data">
+                        <span class="span">Marketing |</span>
+                        <span class="span"><i class="bi bi-calendar4"></i> September 4, 2020</span>
+                        <span class="span">| <i class="bi bi-clock"></i> 36 min</span>
+                    </div>
+                    <b class="blog_card_title">What is traffic arbitrage and does it really make money?</b>
+                    <p>Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
+                    <button class="blog_card_link">Listen </button>
+                </div>
+            </div>
+            <div class="blog_card">
+                <div><img src="images/image4.png" alt=""></div>
+                <div class="blog_card_body">
+                    <button class="blog_card_btn"><i class="bi bi-mic"></i> Podcast</button>
+                    <div class="blog_card_data">
+                        <span class="span">Marketing |</span>
+                        <span class="span"><i class="bi bi-calendar4"></i> September 4, 2020</span>
+                        <span class="span">| <i class="bi bi-clock"></i> 36 min</span>
+                    </div>
+                    <b class="blog_card_title">What is traffic arbitrage and does it really make money?</b>
+                    <p>Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
+                    <button class="blog_card_link">Listen </button>
+                </div>
+            </div>
+            <div class="blog_card">
+                <div><img src="images/image4.png" alt=""></div>
+                <div class="blog_card_body">
+                    <button class="blog_card_btn"><i class="bi bi-mic"></i> Podcast</button>
+                    <div class="blog_card_data">
+                        <span class="span">Marketing |</span>
+                        <span class="span"><i class="bi bi-calendar4"></i> September 4, 2020</span>
+                        <span class="span">| <i class="bi bi-clock"></i> 36 min</span>
+                    </div>
+                    <b class="blog_card_title">What is traffic arbitrage and does it really make money?</b>
+                    <p>Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
+                    <button class="blog_card_link">Listen </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="container">
+            <div class="contact_head">
+            <p class="desc_text">Don’t miss anything</p>
+            <h2 class="title">Subscribe to the Createx School announcements</h2>
+            </div>
+            <form action="" class="contact_form">
+                <input type="text" class="my_input" placeholder="Your working email">
+                <button class="like_button">Subscribe</button>
+            </form>
+        </div>
+        <div class="flex">
+            <img src="images/illuetration3.png" alt="">
+            <img src="images/illuetration3.png" alt="">
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container flex">
+            <div class="f_text">
+                <h1 class="logo"> <a href="">CREATE</a> <img src="images/logo.png" alt=""></h1>
+                <p>Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country. </p>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-youtube"></i>
+                <i class="bi bi-send-fill"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-linkedin"></i>
+            </div>
+            <ul class="f_list">
+                <li>SITE MAP</li>
+                <li> <a href="">About Us </a></li>
+                <li> <a href="">Courses</a></li>
+                <li> <a href="">Events</a></li>
+                <li> <a href="">Blog</a></li>
+                <li> <a href="">Contacts</a></li>    
+            </ul>
+            <ul class="f_list">
+                <li>COURSES</li>
+                <li><a href="">Marketing</a></li>
+                <li> <a href="">Management</a></li>
+                <li> <a href="">HR & Recruting</a></li>
+                <li> <a href="">Design</a></li>
+                <li> <a href="">Development</a></li>
+            </ul>
+            <ul class="f_list">
+            <li>CONTACT US</li>
+            <li><i class="bi bi-telephone"></i> (405) 555-0128</li>
+            <li><i class="bi bi-envelope"></i> hello@createx.com</li>    
+            </ul>
+            <form action="" class="f_form">
+                <h4>SIGN UP TO OUR NEWSLETTER</h4>
+                <input type="text" class="my_input" placeholder="Email address">
+                 <button class="f_form_button">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+                <p>*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.</p>
+            </form>
+        </div>
+    </footer>
+    
+  <div id="arrowTop" hidden></div>
+    <div class="modal" id="registr">
+        <form action="" class="modal-form">
+            <button class="close" onclick="closed(registr)"><i class="bi bi-x-lg"></i></button>
+            <div class="form-head">
+                <b>Sign up</b>
+                <span class="span">Registration takes less than a minute but gives you full control over your studying.</span>
+            </div>
+            <label for="name">Full Name</label>
+            <input type="text" class="my_input" name="name" placeholder="You full name">
+            <label for="email">Email</label>
+            <input type="text" class="my_input"  name="email" placeholder="Your working email">
+            <label for="password">Password</label>
+            <input type="password" class="my_input" name="password" placeholder="Password">
+            <label for="confirm">Confirm Password</label>
+            <input type="password" class="my_input" name="confirm">
+            <div><input type='checkbox'>
+            <label for="">Remember me</label>
+        </div>
+            <button class="like_button">Sign up</button>
+            <span class="span">Already have an account? <a href="">sign in</a></span>
+        </form>
+    </div>
+    <div class="modal" id="login">
+        <form action="" class="modal-form">
+            <button class="close" onclick="closed(login)"><i class="bi bi-x-lg"></i></button>
+            <div class="form-head">
+                <b>Sign in</b>
+                <span class="span">Sign in to your account using email and password provided during registration.</span>
+            </div>
+            <label for="email">Email</label>
+            <input type="text" class="my_input"  name="email" placeholder="Your working email">
+            <label for="password">Password</label>
+            <input type="password" class="my_input" name="password" placeholder="Password">
+            <div class="flex">
+                <div><input type='checkbox'>
+                    <label for="">Keep me signed in</label>
+                </div>
+                <a href="">Forgot password?</a>
+            </div>
+            <button class="like_button">Sign in</button> 
+            <span class="span">Don't have an account? <a href="">sign up</a></span> 
+        </form>
+    </div>
+    <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

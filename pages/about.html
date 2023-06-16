@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+        <div class="flex">
+            <div class="logo"> 
+             <a href="../index.html"> <img src="../images/logo1.png" alt="logo"></a>
+            <img src="../images/logo.png" alt="logo">
+            </div>
+            <nav class="navbar">
+                <a href="about.html" class="navbar_item" style="color: #FF3F3A;">About Us</a>
+                <a href="courses.html"  class="navbar_item">Courses</a>
+                <a href=""  class="navbar_item">Events</a>
+                <a href=""  class="navbar_item">Blog</a>
+                <a href=""  class="navbar_item">Contacts</a>
+            </nav>
+            <div class="header_buttons">
+                <button class="like_button">Get consultation</button>
+                    <i class="bi bi-person" style="font-size: 1.5rem;"></i>
+                    <button class="header_buttons__btn" onclick="opened(login)">login /</button>
+                    <button class="header_buttons__btn" onclick="opened(modal)">Registr</button> 
+            </div>
+            <button class="hamMenu"> <i class="bi bi-list"></i></button>
+        </div>
+    </div> 
+    </header>
+   
+    <div class="container">
+        <div class="about-main flex">
+            <div class="about-main_left">
+                <p class="desc_text">About us</p>
+                <h2 class="title">Createx Online School</h2>
+                <b>Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts.</b>
+                <p>We provide relevant approaches to online learning, internships and employment in the largest companies in the country. Our educational programs help you get a new specialty from scratch. During your studies, we will help you find a job. Check the courses and online events that we organise.</p>
+                <button class="btn">Explore events</button>
+                <button class="like_button">Explore events</button>
+            </div>
+            <div class="about-main_right"><img src="../images/illystration4.png" alt=""></div>
+        </div>
+        <div class="about-statistics flex">
+            <div class="about-st_left">
+                <button class="play">
+                    <i class="bi bi-play-circle-fill" style="font-size: 1.5rem; color: red;"></i>
+                    Watch Video   
+                </button>
+                <img src="../images/aboutimg.png" alt="">
+            </div>
+            <div class="about-st_right">
+                <ul class="about-list">
+                    <li><b>1200</b> students graduated</li>
+                    <li><b>84</b> completed courses</li>
+                    <li><b>16</b> qualified tutors</li>
+                    <li><b>5</b> years of experience</li>
+                </ul>
+            </div>
+        </div>
+        <div class="values">
+            <p class="desc_text">We always stand for</p>
+            <h2 class="title">Our core values</h2>
+            <div class="flex">
+                <div class="value">
+                    <img src="../images/ic-structure.png" alt="">
+                    <b>Structured Approach</b>
+                    <p>Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris. </p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="value">
+                    <img src="../images/Vector (4).png" alt="">
+                    <b>Efficiency</b>
+                    <p>Viverra scelerisque consequat net. Adipisicing esse consequat. </p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="value">
+                    <img src="../images/ic-structure.png" alt="">
+                    <b>Structured Approach</b>
+                    <p>Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris. </p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="value">
+                    <img src="../images/Vector (4).png" alt="">
+                    <b>Efficiency</b>
+                    <p>Viverra scelerisque consequat net. Adipisicing esse consequat. </p>
+                </div>
+            </div>
+        </div>
+        <div class="about-cards">
+            <div class="head">
+                <p class="desc_text">our main directions</p>
+                <h2 class="title">What do we teach</h2>
+            </div>
+            <div class="cards-wrap">
+                <div class="card">
+                    <img src="../images/aboutimg1.png" alt="">
+                    <div class="card_text">
+                        <button>Marketing</button>
+                        <p>Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+                        <b>Check courses</b>
+                        <i class="bi bi-arrow-right" style="color: #FF3F3A;"></i>
+                </div>
+                </div>
+                <div class="card">
+                    <img src="../images/aboutimg2.png" alt="">
+                <div class="card_text">
+                    <button class="btn_management">Management</button>
+                    <p>Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+                    <b>Check courses</b>
+                    <i class="bi bi-arrow-right" style="color: #FF3F3A;"></i>
+                </div>
+                </div>
+                <div class="card">
+                    <img src="../images/aboutimg1.png" alt="">
+                    <div class="card_text">
+                        <button class="btn_hr">HR & Recruting</button>
+                        <p>Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+                        <b>Check courses</b>
+                        <i class="bi bi-arrow-right" style="color: #FF3F3A;"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/aboutimg2.png" alt="">
+                    <div class="card_text">
+                        <button class="btn_design">Design</button>
+                        <p>Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+                        <b>Check courses</b>
+                        <i class="bi bi-arrow-right" style="color: #FF3F3A;"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/ab.png" alt="">
+                    <div class="card_text">
+                        <button class="btn_dev">Development</button>
+                        <p>Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+                        <b>Check courses</b>
+                        <i class="bi bi-arrow-right" style="color: #FF3F3A;"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <p>New studying program coming soon...</p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="process flex">
+            <div class="process-content">
+                <p class="desc_text">Studying process</p>
+                <h2 class="title">That’s how we do it</h2>
+                <div class="step">
+                    <div class="circle"></div>
+                    <span>STEP 1</span>
+                    <h4>Watching online video lectures</h5>
+                     <p>Aliquam turpis viverra quam sit interdum blandit posuere pellentesque. Nisl, imperdiet gravida massa neque.</p>
+                </div>
+                <div class="step">
+                    <div class="circle"></div>
+                    <span>STEP 2</span>
+                    <h4>Passing test</h4>
+                    <p>Facilisis pellentesque quis accumsan ultricies. Eu egestas eget feugiat lacus, amet, sollicitudin egestas laoreet etiam. </p>
+                </div>
+                <div class="step">
+                    <div class="circle"></div>
+                    <span>STEP 3</span>
+                    <h4>Curator’s feedback</h4>
+                    <p>Eget amet, enim pharetra leo egestas nisi, odio imperdiet facilisis. Aliquet orci varius volutpat egestas facilisi lobortis. </p>
+                </div>
+                <div class="step">
+                    <div class="circle"></div>
+                    <span>STEP 4</span>
+                    <h4>Corrections if needed</h4>
+                    <p>Non tempor pulvinar tincidunt aliquam. Placerat ultricies malesuada dui auctor.</p>
+                </div>
+            </div>
+            <div class="process-img">
+                <img src="../images/illustration5.png" alt="">
+            </div>
+        </div>
+        <div class="team">
+            <div class="team-head">
+                <p class="desc_text">Best tutors are all here</p>
+                <h2 class="title">Meet our team</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-grid_item">
+                    <div class="team_img">
+                        <img src="../images/image2.png" alt="">
+                        <div class="cosial">
+                            <div class="icons">
+                                <i class="bi bi-facebook" style="color: white;"></i>
+                                <i class="bi bi-instagram" style="color: white;"></i>
+                                <i class="bi bi-linkedin" style="color: white;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <b>Dianne Russell</b>
+                    <p>Founder and CEO</p>
+                </div>
+                <div class="team-grid_item">
+                <div class="team_img">
+                    <img src="../images/image3.png" alt="">
+                    <div class="cosial">
+                        <div class="icons">
+                            <i class="bi bi-facebook" style="color: white;"></i>
+                            <i class="bi bi-instagram" style="color: white;"></i>
+                            <i class="bi bi-linkedin" style="color: white;"></i>
+                        </div>
+                    </div>
+                </div>
+                    <b>Marvin McKinney</b>
+                    <p>PM, Curator of Management Course</p>
+                </div>
+                <div class="team-grid_item">
+                    <div class="team_img">
+                        <img src="../images/image2.png" alt="">
+                        <div class="cosial">
+                            <div class="icons">
+                                <i class="bi bi-facebook" style="color: white;"></i>
+                                <i class="bi bi-instagram" style="color: white;"></i>
+                                <i class="bi bi-linkedin" style="color: white;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <b>Dianne Russell</b>
+                    <p>Founder and CEO</p>
+                </div>
+                <div class="team-grid_item">
+                    <div class="team_img">
+                        <img src="../images/image3.png" alt="">
+                        <div class="cosial">
+                            <div class="icons">
+                                <i class="bi bi-facebook" style="color: white;"></i>
+                                <i class="bi bi-instagram" style="color: white;"></i>
+                                <i class="bi bi-linkedin" style="color: white;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <b>Marvin McKinney</b>
+                    <p>PM, Curator of Management Course</p>
+                </div>
+                <div class="team-grid_item">
+                    <div class="team_img">
+                        <img src="../images/image2.png" alt="">
+                        <div class="cosial">
+                            <div class="icons">
+                                <i class="bi bi-facebook" style="color: white;"></i>
+                                <i class="bi bi-instagram" style="color: white;"></i>
+                                <i class="bi bi-linkedin" style="color: white;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <b>Dianne Russell</b>
+                    <p>Founder and CEO</p>
+                </div>
+                <div class="team-grid_item">
+                    <div class="team_img">
+                        <img src="../images/image3.png" alt="">
+                        <div class="cosial">
+                            <div class="icons">
+                                <i class="bi bi-facebook" style="color: white;"></i>
+                                <i class="bi bi-instagram" style="color: white;"></i>
+                                <i class="bi bi-linkedin" style="color: white;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <b>Marvin McKinney</b>
+                    <p>PM, Curator of Management Course</p>
+                </div>
+                <div class="team-grid_item">
+                    <div class="team_img">
+                        <img src="../images/image2.png" alt="">
+                        <div class="cosial">
+                            <div class="icons">
+                                <i class="bi bi-facebook" style="color: white;"></i>
+                                <i class="bi bi-instagram" style="color: white;"></i>
+                                <i class="bi bi-linkedin" style="color: white;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <b>Dianne Russell</b>
+                    <p>Founder and CEO</p>
+                </div>
+                <div class="team-grid_item">
+                    <div class="team_img">
+                        <img src="../images/image3.png" alt="">
+                        <div class="cosial">
+                            <div class="icons">
+                                <i class="bi bi-facebook" style="color: white;"></i>
+                                <i class="bi bi-instagram" style="color: white;"></i>
+                                <i class="bi bi-linkedin" style="color: white;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <b>Marvin McKinney</b>
+                    <p>PM, Curator of Management Course</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousels">
+        <div class="container">
+            <div class="carousel-testimonial swiper">
+                <p class="desc_text">TESTIMONIALS</p>
+                <h2 class="title">What our students say</h2>
+                <div class="swiper-wrapper">
+                    <div class="testimonial swiper-slide">
+                            <div class="testimonial_text flex">
+                                <i class="bi bi-quote" style="font-size:25px;"></i>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+                            </div>
+                            <div class="user flex">
+                                <img src="../images/user.png" alt="">
+                                <div class="user-name">
+                                    <p>Eleanor Pena</p>
+                                    <span class="span">Position, Course</span>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="testimonial swiper-slide">
+                        <div class="testimonial_text flex">
+                            <i class="bi bi-quote" style="font-size:25px;"></i>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+                        </div>
+                        <div class="user flex">
+                            <img src="../images/user.png" alt="">
+                            <div class="user-name">
+                                <p>Eleanor Pena</p>
+                                <span class="span">Position, Course</span>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="testimonial swiper-slide">
+                        <div class="testimonial_text flex">
+                            <i class="bi bi-quote" style="font-size:25px;"></i>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+                        </div>
+                        <div class="user flex">
+                            <img src="../images/user.png" alt="">
+                            <div class="user-name">
+                                <p>Eleanor Pena</p>
+                                <span class="span">Position, Course</span>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="testimonial swiper-slide">
+                        <div class="testimonial_text flex">
+                            <i class="bi bi-quote" style="font-size:25px;"></i>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+                        </div>
+                        <div class="user flex">
+                            <img src="../images/user.png" alt="">
+                            <div class="user-name">
+                                <p>Eleanor Pena</p>
+                                <span class="span">Position, Course</span>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"><i class="bi bi-arrow-left"></i></div>
+                <div class="swiper-button-next"><i class="bi bi-arrow-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="blog container">
+        <p class="desc_text">Our blog</p>
+        <h2 class="title">Latest posts</h2>
+        <div class="blog_cards">
+            <div class="blog_card">
+                <div><img src="../images/image4.png" alt=""></div>
+                <div class="blog_card_body">
+                    <button class="blog_card_btn"><i class="bi bi-mic"></i> Podcast</button>
+                    <div class="blog_card_data">
+                        <span class="span">Marketing |</span>
+                        <span class="span"><i class="bi bi-calendar4"></i> September 4, 2020</span>
+                        <span class="span">| <i class="bi bi-clock"></i> 36 min</span>
+                    </div>
+                    <b class="blog_card_title">What is traffic arbitrage and does it really make money?</b>
+                    <p>Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
+                    <button class="blog_card_link">Listen </button>
+                </div>
+            </div>
+            <div class="blog_card">
+                <div><img src="../images/image4.png" alt=""></div>
+                <div class="blog_card_body">
+                    <button class="blog_card_btn"><i class="bi bi-mic"></i> Podcast</button>
+                    <div class="blog_card_data">
+                        <span class="span">Marketing |</span>
+                        <span class="span"><i class="bi bi-calendar4"></i> September 4, 2020</span>
+                        <span class="span">| <i class="bi bi-clock"></i> 36 min</span>
+                    </div>
+                    <b class="blog_card_title">What is traffic arbitrage and does it really make money?</b>
+                    <p>Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
+                    <button class="blog_card_link">Listen </button>
+                </div>
+            </div>
+            <div class="blog_card">
+                <div><img src="../images/image4.png" alt=""></div>
+                <div class="blog_card_body">
+                    <button class="blog_card_btn"><i class="bi bi-mic"></i> Podcast</button>
+                    <div class="blog_card_data">
+                        <span class="span">Marketing |</span>
+                        <span class="span"><i class="bi bi-calendar4"></i> September 4, 2020</span>
+                        <span class="span">| <i class="bi bi-clock"></i> 36 min</span>
+                    </div>
+                    <b class="blog_card_title">What is traffic arbitrage and does it really make money?</b>
+                    <p>Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
+                    <button class="blog_card_link">Listen </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="container">
+            <div class="contact_head">
+            <p class="desc_text">Don’t miss anything</p>
+            <h2 class="title">Subscribe to the Createx School announcements</h2>
+            </div>
+            <form action="" class="contact_form">
+                <input type="text" class="my_input" placeholder="Your working email">
+                <button class="like_button">Subscribe</button>
+            </form>
+        </div>
+        <div class="flex">
+            <img src="../images/illuetration3.png" alt="">
+            <img src="../images/illuetration3.png" alt="">
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container flex">
+            <div class="f_text">
+                <h1 class="logo">  <a href="../index.html"> CREATE</a> <img src="../images/logo.png" alt=""></h1>
+                <p>Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country. </p>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-youtube"></i>
+                <i class="bi bi-send-fill"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-linkedin"></i>
+            </div>
+            <ul class="f_list">
+                <li>SITE MAP</li>x`
+                <li> <a href="">About Us </a></li>
+                <li> <a href="">Courses</a></li>
+                <li> <a href="">Events</a></li>
+                <li> <a href="">Blog</a></li>
+                <li> <a href="">Contacts</a></li>    
+            </ul>
+            <ul class="f_list">
+                <li>COURSES</li>
+                <li><a href="">Marketing</a></li>
+                <li> <a href="">Management</a></li>
+                <li> <a href="">HR & Recruting</a></li>
+                <li> <a href="">Design</a></li>
+                <li> <a href="">Development</a></li>
+            </ul>
+            <ul class="f_list">
+            <li>CONTACT US</li>
+            <li><i class="bi bi-telephone"></i> (405) 555-0128</li>
+            <li><i class="bi bi-envelope"></i> hello@createx.com</li>    
+            </ul>
+            <form action="" class="f_form">
+                <h4>SIGN UP TO OUR NEWSLETTER</h4>
+                <input type="text" class="my_input" placeholder="Email address">
+                <button class="f_form_button">
+                <i class="bi bi-arrow-right"></i>
+            </button>
+                <p>*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.</p>
+            </form>
+        </div>
+    </footer>
+    <div class="modal" id="registr">
+        <form action="" class="modal-form">
+            <button class="close" onclick="closed(registr)"><i class="bi bi-x-lg"></i></button>
+            <div class="form-head">
+                <b>Sign up</b>
+                <span class="span">Registration takes less than a minute but gives you full control over your studying.</span>
+            </div>
+            <label for="name">Full Name</label>
+            <input type="text" class="my_input" name="name" placeholder="You full name">
+            <label for="email">Email</label>
+            <input type="text" class="my_input"  name="email" placeholder="Your working email">
+            <label for="password">Password</label>
+            <input type="password" class="my_input" name="password" placeholder="Password">
+            <label for="confirm">Confirm Password</label>
+            <input type="password" class="my_input" name="confirm">
+            <div><input type=”checkbox”>
+            <label for="">Remember me</label>
+        </div>
+            <button class="like_button">Sign up</button>
+            <span class="span">Already have an account? <a href="">sign in</a></span>
+        </form>
+    </div>
+    <div class="modal" id="login">
+        <form action="" class="modal-form">
+            <button class="close" onclick="closed(login)"><i class="bi bi-x-lg"></i></button>
+            <div class="form-head">
+                <b>Sign in</b>
+                <span class="span">Sign in to your account using email and password provided during registration.</span>
+            </div>
+            <label for="email">Email</label>
+            <input type="text" class="my_input"  name="email" placeholder="Your working email">
+            <label for="password">Password</label>
+            <input type="password" class="my_input" name="password" placeholder="Password">
+            <div class="flex">
+                <div><input type=”checkbox”>
+                    <label for="">Keep me signed in</label>
+                </div>
+                <a href="">Forgot password?</a>
+            </div>
+            <button class="like_button">Sign in</button> 
+            <span class="span">Don't have an account? <a href="">sign up</a></span> 
+        </form>
+    </div>
+    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="../index.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+$sm:10px;
+$md:15px;
+$xl-1:18px;
+$xl-2:20px;
+$xl-3:30px;
+$xl-4:35px;
+$xl-5:45px;
+$xll:60px;
+$xll-1:80px;
+$xll-2:100px;
+$primary:#FF3F3A;
+$secondary:#E5E5E5;
+$white:#fff;
+$text-color:#1E212C;
+$muted:#424551;
+$gradient:linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+$gradient1:linear-gradient(55.95deg, #ff403a43 0%, #f75e0539 100%);
+$shadow:0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+
+
+@mixin grid($columns, $gap) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-gap: $gap;
+  }
+  @mixin color(){
+    color: #ff4242;
+  }
+  @mixin flex($direction, $justify){
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+  }
+
+  *{
+    box-sizing: border-box;
+    font-family: 'Lato';
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+.container{
+    max-width:1230px;
+    margin: 0 auto; 
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+button{
+  cursor: pointer;
+}
+
+.like_button{
+    background: $gradient;
+    border:none;
+    padding: $md $xl-4;
+    border-radius: 4px;
+    color: $white;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+      background: transparent;
+      background-color: #fff;
+      // border: 1px solid $text-color;
+      color: $text-color;
+      box-shadow: 2px 3px 5px #333;
+    }
+}
+.btn{
+    border: 1px solid $primary;
+    padding: $md $xl-4;
+    background: inherit;
+    margin-right: $md;
+    cursor: pointer;
+    transition: all .3;
+    &:hover{
+      background: $gradient;
+      color: $white;
+    }
+}
+i{
+  margin: 5px;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+p{
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
+}
+.title{
+    font-size: $xl-5;
+      font-weight: 700;
+      color: $text-color;
+      margin-top: 0;
+}
+.desc_text{
+    font-size: $xl-2;
+      font-weight: 600;
+      color: $text-color;
+}
+.price{
+  @include color();
+  font-size: $xl-1 !important;
+  font-weight: 700;
+}
+.span{
+  font-size: $sm;
+  color: #787A80;;
+}
+input:focus{
+ box-shadow:inset $shadow;
+ outline: 3px solid rgba(0, 0, 255, 0.504);
+}
+.my_input{
+  border: none;
+  padding: $md;
+  width: 200px;
+  outline: none;
+}
+.modal{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(97, 84, 84, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  display: none;
+  .modal-form{
+    background-color: $white;
+    @include flex(column, space-between);
+    padding:$xl-3;
+    width: 350px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   box-shadow: $shadow;
+  }
+  .close{
+    padding: 4px;
+    margin-left: auto;
+    background-color: $white;
+    border: none;
+    cursor: pointer;
+  }
+  .form-head{
+    text-align: center;
+    margin: $md 0;
+    @include flex(column, strech)
+  }
+  .my_input{
+    width: 100%;
+    border: 1px solid;
+    padding: $sm $xl-2;
+    margin: $sm 0;
+  }
+  .like_button{
+    margin: $xl-2 0;
+  }
+  a{
+    color:$primary;
+  }
+}
+.show{
+  display: block !important;
+}
+
+
+#arrowTop {
+  height: 10px;
+  width: 15px;
+  color: green;
+  position: fixed;
+  bottom: $xl-5;
+  right: $xl-2;
+  cursor: pointer;
+  &::before{
+    content: '▲';
+  }
+}
+
+@media (max-width:992px){
+  .container{
+    width: 90%;
+    // padding:0 5px;
+  }
+  .like_button{
+    padding: $sm $xl-1;
+  }
+}
+
+@media (max-width:767px){
+  .flex{
+    flex-wrap: wrap;
+  }
+  .my_input{
+    width: 100px;
+  }
+}
+
+@media(max-width:576px){
+  .title{
+    font-size: $xl-3;
+  }
+  .desc_text{
+    font-size: $xl-1;
+  }
+  .btn{
+    padding: $sm $xl-2;
+  }
+}
