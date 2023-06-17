@@ -217,20 +217,30 @@
  } 
 
 .wrapper{
-  padding: $xll;
+   padding: $xll $xl-2;
   position: relative;
   .content{
-    width: 35%;
+    width: 30%;
     .logos{
       margin-top: $xll;
+    }
+    @media(max-width: 996px){
+      width: 90%;
+      margin-bottom: $xl-2;
     }
   }
   .certificat{
     position: absolute;
     right: 0;
-    top: 7%;
+    top: 13%;
+      @media(max-width: 996px){
+        position: static;
+        img{
+          width: 100%;
+        }
+    }
   }
-}
+} 
 
 .carousels{
   background-color: #F4F5F6;
@@ -272,54 +282,55 @@
   }
 }
 }
-  .carousel-testimonial{
-    text-align: center;
-    background-color: #F4F5F6;
-    padding: $xl-3 $xll-2 !important;
-    .swiper-button-prev, .swiper-button-next {
-      color: #000000;
-      top: 60%;
-      border-radius: 50%;
-      padding: 0 $xl-2;
+.carousel-testimonial{
+  text-align: center;
+  background-color: #F4F5F6;
+  padding: $xl-3 $xll-2 !important;
+  .swiper-button-prev, .swiper-button-next {
+    color: #000000;
+    top: 60%;
+    border-radius: 50%;
+    padding: 0 $xl-2;
 
-      &:after {
-        content: unset;
-      }
-
-      &:hover {
-        background-color: $primary;
-        color: #fff;
-      }
+    &:after {
+      content: unset;
     }
 
-    .swiper-button-prev {
-      left: 0;
-    }
-
-    .swiper-button-next {
-      right: 0;
-    }
-
-  .testimonial{
-    background-color: $white;
-    width: 80%;
-    margin: $xl-5 auto;
-    border-radius: 4px;
-    padding: $xll;
-    text-align: left;
-    .testimonial_text{
-      align-items: flex-start;
-    }
-    .user{
-      margin-top: $sm;
-       justify-content: flex-start;
-      .user-name{
-        margin: 0 $sm;
-      }
+    &:hover {
+      background-color: $primary;
+      color: #fff;
     }
   }
- 
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+.testimonial{
+  background-color: $white;
+   width: 80%;
+  margin: $xl-5 auto;
+  border-radius: 4px;
+  padding: $xll;
+  text-align: left;
+  .testimonial_text{
+    align-items: flex-start;
+  }
+  .user{
+    margin-top: $sm;
+     justify-content: flex-start;
+    .user-name{
+      margin: 0 $sm;
+    }
+  }
 }
+
+}
+
 
 .blog{
   padding: $xll-2 0;
@@ -474,20 +485,6 @@
 }
 
  }
- .wrapper{
-  // padding: $xl-3;
-  .certificat{
-    position: static;
-    margin: $xl-4 0;
-    img{
-      width: 100%;
-    }
-  }
-  .content{
-    width: 60%;
-  }
- }
-
 
 
 

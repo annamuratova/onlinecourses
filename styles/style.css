@@ -1145,19 +1145,33 @@ input:focus {
 }
 
 .wrapper {
-  padding: 60px;
+  padding: 60px 20px;
   position: relative;
 }
 .wrapper .content {
-  width: 35%;
+  width: 30%;
 }
 .wrapper .content .logos {
   margin-top: 60px;
 }
+@media (max-width: 996px) {
+  .wrapper .content {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
 .wrapper .certificat {
   position: absolute;
   right: 0;
-  top: 7%;
+  top: 13%;
+}
+@media (max-width: 996px) {
+  .wrapper .certificat {
+    position: static;
+  }
+  .wrapper .certificat img {
+    width: 100%;
+  }
 }
 
 .carousels {
@@ -1390,17 +1404,6 @@ input:focus {
 }
 .section .section_items {
   width: 80%;
-}
-
-.wrapper .certificat {
-  position: static;
-  margin: 35px 0;
-}
-.wrapper .certificat img {
-  width: 100%;
-}
-.wrapper .content {
-  width: 60%;
 }
 
 @media (max-width: 767px) {
