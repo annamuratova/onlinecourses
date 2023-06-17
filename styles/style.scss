@@ -216,30 +216,30 @@
     }
  } 
 
-.wrapper{
-   padding: $xll $xl-2;
-  position: relative;
-  .content{
-    width: 30%;
-    .logos{
-      margin-top: $xll;
-    }
-    @media(max-width: 996px){
-      width: 90%;
-      margin-bottom: $xl-2;
-    }
-  }
-  .certificat{
-    position: absolute;
-    right: 0;
-    top: 13%;
-      @media(max-width: 996px){
-        position: static;
-        img{
-          width: 100%;
-        }
-    }
-  }
+ .wrapper{
+  padding: $xll $xl-2;
+ position: relative;
+ .content{
+   width: 30%;
+   .logos{
+     margin-top: $xll;
+   }
+   @media(max-width: 996px){
+     width: 90%;
+     margin-bottom: $xl-2;
+   }
+ }
+ .certificat{
+   position: absolute;
+   right: 0;
+   top: 13%;
+     @media(max-width: 996px){
+       position: static;
+       img{
+         width: 100%;
+       }
+   }
+ }
 } 
 
 .carousels{
