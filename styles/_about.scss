@@ -1,7 +1,8 @@
 @import "./global";
 
 .about-main{
-    padding: $xll 0;
+    padding-bottom: $xll;
+    padding-top: 150px;
     .about-main_left{
         width: 50%;
         padding-left:$xll;

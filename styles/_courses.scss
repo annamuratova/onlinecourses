@@ -4,14 +4,23 @@
 .courses-title{
     text-align: center;
     padding: $xl-5;
+    padding-top: 150px;
+    .title{
+        margin: 0;
+    }
 }
 a{
     text-decoration: none;
     color: $text-color;
 }
 .courses-menu{
+    row-gap:$md ;
   .flex{
-    width: 65%;
+    gap:$xll;
+    @media (max-width:996px){
+    column-gap: $xl-3;
+    row-gap: $md;
+    }
   } 
     .search{
         height:$xl-4;

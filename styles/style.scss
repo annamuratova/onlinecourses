@@ -4,14 +4,19 @@
 
 
 .header{
+  margin-bottom: -130px;
   padding: $xl-4 0;
-  .logo{
-    &:hover{
+  &__logo{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+       &:hover{
       cursor: pointer;
     }
   }
   .navbar{
-    .navbar_item{
+    width: 80%;
+    &__item{
       position: relative;
       display: inline-block;
       margin-right:$xl-4;
@@ -35,21 +40,31 @@
           width: 100%;
         }
       }
+      &--active{
+        color: $primary;
+      }
+    }
+    &__button{
+      padding: 0;
+      border: none;
+       background-color: inherit;
+       cursor: pointer;
+       &:hover{
+         color: $primary;
+       }
+       &--login{
+        padding: 5px 3px;
+        display: flex;
+        align-items: center;
+        margin: 0 7px;
+        i{
+         margin-right: 2px;
+        }
+       }
     }
   }
-  .like_button{
-    margin-right: $sm;
-  }
-  .header_buttons__btn{
-    padding: 0;
-    border: none;
-    background-color: inherit;
-    cursor: pointer;
-    &:hover{
-      color: $primary;
-    }
-  }
-  .hamMenu{
+
+  &__burger{
     border: 2px solid $primary;
     border-radius: 4px;
     display: none;
@@ -57,13 +72,14 @@
     background-color: inherit;
   }
 }
- .background{
-  background-image: url(../images/background.png);
-  background-repeat: no-repeat;
-}
-  .main{
-    padding: $xll-1 0;
-    .main-left{
+
+  .main-head{
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:$xll 0;
+    padding-top: 150px;
+    &__left{
       padding-right:$xll-2;
       .play{
         border: none;
@@ -74,10 +90,13 @@
           border: 1px solid $primary;
         }
       }
-      .main-left_title{
-        margin-bottom:$xl-5;
+      .main-head__title{
+        margin: $sm  0 $xl-5 0;
         font-size: $xll;
         }
+      }
+      button{
+        margin-top: 5px;
       }
     }
   
@@ -88,67 +107,79 @@
       height: 8px;
       background-color: $primary;
       border-radius: 50%;
-    }
-    .statistics-item{
-      color: $text-color;
-      .statistics-item_count{
-        font-size: $xl-5;
-        margin-right: 5px;
+      @media(max-width:990px){
+        display: none;
       }
+    }
+    &__item{
+      color: $text-color;
+    }
+    .statistics__count{
+      font-size: $xl-5;
+      margin-right: 5px;
     }
   }
 
-
-
 .about{
   padding: $xll-1 0;
-  .about-img{
+  &__img{
     img{
       width: 100%;
     }
   }
-  .about-content{
+  &__content{
     margin-left: $xll-1;
-    .about_list{
-      margin-bottom: $xl-4;
-      .about_list__item{
-        margin-bottom: $sm;
-        line-height: 160%;
-        display: flex;
-        align-items: flex-start;
-        img{
-          margin: 5px 5px 5px 0;
-        }
+  }
+  &__ul{
+    margin-bottom: $xl-4;
+    .about__list{
+      margin-bottom: $sm;
+      line-height: 160%;
+      display: flex;
+      align-items: flex-start;
+      img{
+        margin: 5px 5px 5px 0;
       }
     }
   }
 }
 
-// section{
-//   background-color: $secondary;
-// }
 
 .courses{
+  padding: $xl-5 0;
+  &__head{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+   margin-bottom: $xl-5;
+    .title{
+      margin: 0;
+    }
+    @media (max-width:996px){
+      .btn{
+        margin-bottom: 6px
+      }
+    }
+  }
   .grid{
     @include grid(repeat(2, 1fr), 30px);
-    .course-card{
+    .card{
       box-shadow: $shadow;
-      .course-card_content{
+      &__content{
         padding: $xl-4;
-        @include flex(column,space-between);
-        .course-card_button{
+        @include flex(column, $xl-1);
+        .card__button{
           width: $xll-1;
           background-color: #03CEA4;
           color: $white;
           border: none;
           border-radius: 4px;
-          margin-bottom: $xl-2;
         }
-        .course-card_desc{
+        .card__desc{
           font-size: $xl-2;
         }
-        .course-card_footer{
-          margin-top: $xl-2;
+        .card__footer{
+           margin-top: $xl-2;
           span :nth-child(2){
             font-size: $xl-2;
             color:  #787A80;
@@ -160,14 +191,21 @@
   }
 }
 
-.section{
-  padding: $xll-2;
-  h2, .desc_text{
+.benefits{
+   padding: $xll 0;
+  .title, .desc-text{
     text-align: center;
+  }
+  &__items{
+    @include flex (row, $xll);
+    align-items: center;
+    .flex{
+      margin: 0;
+    }
   }
   .flex{
     margin: $xll-1 0;
-    .section_left{
+    .benefits__left{
       padding-right: $xll-1;
         h3{
           font-size: $xl-3;
@@ -184,16 +222,16 @@
  .events{
     background:$gradient1;
     padding: $xll 0;
-    .title, .desc_text{
+    .title, .desc-text{
       text-align: center;
     }
-    .events-item{
+    &__item{
       display: flex;
       align-items: center;
       background-color: $white;
       margin: $xl-1;
       padding: $xl-3 $xl-4;
-      .event_text{
+      .event-text{
         margin-left: $xll;
       }
       .price{
@@ -207,7 +245,7 @@
         cursor: pointer;
       }
     }
-    .events_bottom{
+    &__bottom{
       margin-top: $xll;
       text-align: center;
       .like_button{
@@ -216,28 +254,34 @@
     }
  } 
 
- .wrapper{
-  padding: $xll $xl-2;
+ .certificat-blog{
+  padding: $xll $xl-1;
  position: relative;
- .content{
+ &__content{
    width: 30%;
-   .logos{
-     margin-top: $xll;
-   }
    @media(max-width: 996px){
      width: 90%;
-     margin-bottom: $xl-2;
+     margin-bottom: $xl-3;
    }
  }
+ &__logos{
+  margin-top: $xll;
+}
  .certificat{
    position: absolute;
    right: 0;
    top: 13%;
+   z-index: 2;
+   @media (max-width:1140px) {
+    width: 70%;
+    top: 20%;
+    img{
+      width: 100%;
+    }
+   }
      @media(max-width: 996px){
        position: static;
-       img{
-         width: 100%;
-       }
+       width: 100%;   
    }
  }
 } 
@@ -245,12 +289,12 @@
 .carousels{
   background-color: #F4F5F6;
   padding:$xll-1;
-  .first-carousel{
+  .carousel-team{
     margin-bottom: $xll;
   .title{
     margin-bottom: $xl-5;
   }
-  .carousel-card{
+  &__card{
     img{
       background-color: #FFCF2D;
     }
@@ -267,13 +311,13 @@
     top: 15%;
     left: 85%;
     border-radius: 50%;
-    padding: 0 $xl-1;
+    padding: 0 22px;
   }
   .arrow-right{
     top:15%;
     right: 5%;
     border-radius: 50%;
-    padding: 0 $xl-1;
+    padding: 0 22px;
   }
   .arrow-left:hover,
   .arrow-right:hover{
@@ -309,6 +353,14 @@
   .swiper-button-next {
     right: 0;
   }
+  .swiper-pagination{
+    bottom: 0;
+  }
+  .swiper-pagination-bullet{
+    width: $md;
+    height: 3px;
+    background-color: $primary;
+  }
 
 .testimonial{
   background-color: $white;
@@ -317,7 +369,7 @@
   border-radius: 4px;
   padding: $xll;
   text-align: left;
-  .testimonial_text{
+  &__text{
     align-items: flex-start;
   }
   .user{
@@ -334,9 +386,9 @@
 
 .blog{
   padding: $xll-2 0;
-  .blog_cards{
+  &__cards{
     @include grid(repeat(3, 1fr), $xl-2);
-    .blog_card{
+    .blog-card{
       position: relative;
       img{
         width: 100%;
@@ -345,7 +397,7 @@
           transform: translateY(-5px);
         }
       }
-      .blog_card_btn{
+      &__btn{
         background-color: $white;
         border-radius: 4px;
         border: none;
@@ -353,42 +405,44 @@
         left: $sm;
         top: $sm;
       }
-      .blog_card_data{
+     
+      &__data{
         margin: $md 0;
       }
-      .blog_card_title{
+      .blog--title{
         font-size: $xl-2;
         line-height: 150%;
         color: $text-color;
       }
-      .blog_card_link{
+      .blog--link{
         border: none;
         background-color: inherit;
         margin-top: $xl-2;
       }
     }
   }
+ 
+  
 } 
 
 .contact{
+  position: relative;
   background-image: $gradient1;
   text-align: center;
-  padding-top: $xll;
-  .contact_head{
+  padding-top: $xll-1;
+  &__head{
     width: 50%;
     margin: 0 auto;
     @media (max-width:700px){
       width: 80%;
     }
   }
-  .contact_form{
+  &__form{
     padding: $xl-5;
     @media (max-width:700px){
-     display: flex;
-     flex-direction: column;
-     .my_input{
+    @include flex (column, 5px);
+     .my-input{
       width: 100%;
-      margin-bottom: 5px;
      } 
     }
   }
@@ -411,33 +465,40 @@
   }
   .flex{
     align-items: flex-start;
-    .f_text{
-      width: 25%;
+  }
+  &__text{
+    width: 25%;
+    .logo{
+      font-size: 25px;
     }
-    .f_form{
-      width: 25%;
+  }
+  &__lists{
+    li{
+      margin-bottom: $xl-1;
+     
+    }
+  }
+  &__form{
+    width: 25%;
+    @media (max-width:700px){
+      display: flex;
+      flex-direction:column;
+    }
+    .my-input{
+      background-color:  rgba(255, 255, 255, 0.12);
+      margin-bottom: $md;
       @media (max-width:700px){
-        display: flex;
-        flex-direction:column;
-      }
-      .my_input{
-        background-color:  rgba(255, 255, 255, 0.12);
-        margin-bottom: $md;
-        @media (max-width:700px){
-          width: 100%;
-        }
-      }
-      &_button{
-      padding: $md;
-        background-color:  rgba(255, 255, 255, 0.12);
-        border: none;
-        color: $white;
+        width: 100%;
       }
     }
-    .f_list{
-      li{
-        margin-bottom: $xl-1;
-       
+    .footer-button{
+    padding: $md;
+      background-color:  rgba(255, 255, 255, 0.12);
+      border: none;
+      color: $white;
+      &:hover{
+        background-color: $white;
+        color: $primary;
       }
     }
   }
@@ -448,77 +509,118 @@
 @media (max-width:996px){
  .header{
   .navbar{
-    .navbar_item{
-      margin-right: $xl-1;
+    &__item{
+       margin-left: $md;
     }
   }
  }
  
-  .main{
+  .main-head{
     padding: $xll 0;
+    padding-top: 150px;
     img{
       width: 100%;
     }
-    .main-left{
+    &__left{
       padding-right:$xl-3;
-      .main-left_title{
+      .main-head__title{
         margin-bottom:$xl-5;
         font-size: $xll;
         }
       }
     }
+  
+  .courses{
+    .grid{
+      .card{
+        flex-wrap: wrap;
+        &__img{
+          width: 100%;
+          text-align: center;
+          img{
+            width: 80%;
+          }
+        }
+      }
+    }
   }
   
- .section{
+ .benefits{
    padding: $xl-3 $xl-1;
   .flex{
   img{
     width: 100%;
   }
-  .section_left{
+  &__left{
      width: 50%;
      padding-right: $sm;
   }
 }
-.section_items{
-  width: 80%;
+&__items{
+  gap: $xl-3;
+  .flex{
+    align-items: flex-start;
+    i{
+      margin: 0 5px 5px 5px;
+    }
+  }
 }
 
  }
-
+ .carousels{
+  .carousel-team{
+    .arrow-left{
+      left: 81%;
+    }
+  }
+}
+.carousel-testimonial{
+  padding: $xl-3 $xl-5 !important;
+}
+}
 
 
 @media (max-width:767px){
   .header{
   .navbar{
-    height: 90vh;
+    height: 100vh;
+    width: 45vw;
     display: none;
     background-color: $white;
     position: fixed;
     left: 0;
-    top: $xl-1;
-    .navbar_item{
+    top: 0;
+    text-align: center;
+    &__item{
       display: block;
       margin: $xl-2;
       font-size: $xl-2;
     }
+    &__buttons{
+     flex-direction: column;
+    }
   }
-  .hamMenu{
+  &__burger{
     display: block;
   }
 }
 
 
 .about{
-  .about-content{
+  .about__content{
     margin-left: $xl-2;
   }
 }
   .courses{
     .grid{
-      @include grid(repeat(1, 1fr), $xl-1);
+      @include grid(repeat(2, 1fr), $xl-1);
       margin: $xl-1 0;
-      
+    }
+  }
+  .benefits{
+    &__items{
+      gap: $xll;
+      flex-wrap: wrap;
     }
   }
   .carousels{
@@ -529,13 +631,16 @@
     .flex{
       flex-wrap: nowrap;
     }
+    .testimonial{
+      padding: $xl-5 $xl-1;
+    }
   }
   
   .blog{
-    .blog_cards{
+    &__cards{
       @include grid(repeat(2, 1fr), $md);
-      .blog_card{
-        .blog_card_title{
+      .blog-card{
+        blog--title{
           font-size: $xl-1;
           line-height: 150%;
           color: $text-color;
@@ -547,122 +652,168 @@
     }
   } 
   .contact{
-    .flex{
-      flex-wrap: nowrap;
-      img{
-        // width: 50%;
+      .contact-img{
         display: none;
       }
-    }
   }
   .footer{
-    .flex{
-     .f_list:nth-child(4){
+     &__list:nth-child(4){
       width: 40%;
      }
-    }
   }
 }
 
 @media(max-width:576px){
   .header{
-    .logo{
-      margin-bottom: $sm;
-    }
-    .hamMenu{
-      position: absolute;
-      top: $md;
-      right: $sm;
-    }
-    
+    padding: $xl-5 0;
+    &__logo{
+      margin: $sm;
+    }  
   }
   
-    .main{
-      .main-left{
+    .main-head{
+      &__left{
         padding-right:$xll;
-        .main-left_title{
+        .main-head__title{
           font-size: $xl-4;
           }
         }
       }
     
   .statistics{
-    flex-direction: column;
+    @include flex (column, $md);
     padding: $xll 0;
-    .dotted{
-      display: none;
+    &__item{
+      flex-direction: column;
     }
-    .statistics-item{
-      margin-bottom: 5px;
-      .statistics-item_count{
-        font-size: $xl-3;
-        margin-right: 5px;
-      }
+    &__count{
+      font-size: $xl-3;
     }
   }
-  .section{
+  .benefits{
     .flex{
       margin: $xl-3 0;
-      .section_left{
+      .benefits__left{
         width: 90%;
       }
     }
-    .section_items{
-      div{
-        margin: $sm;
+    &__items{
+      width: 100%;
+      @include flex (column, $md);
+    }
+  }
+  .courses{
+    .grid{
+      @include grid (repeat(2, 1fr), $sm);
+      @media (max-width:500px) {
+        @include grid (repeat(1, 1fr), $md);
+        .card__img{
+          img{
+            width: 82%;
+          }
+        }
       }
     }
   }
   .events{
-    .events-item{
+    &__item{
       flex-direction: column;
       padding: $xl-1 $md;
-      align-items: start;
-      .event_text{
+      gap: $sm;
+      .event-text{
         margin-left: 0;
       }
+      .btn{
+        margin: $sm auto;
+      }
+    }
+    &__bottom{
+     .like-button{
+      margin-top: $sm;
+     }
     }
   }
-  .wrapper{
+  .certificat-blog{
     padding: $xl-5;
-    .content{
+    &__content{
       width: 100%;
     }
   }
   .carousels{
-    .first-carousel{
+    .carousel-team{
       .arrow-left{
         left: 65%;
       }
+    }
+  }
+  .carousel-testimonial{
+    padding: $xl-3 !important;
+    .swiper-button-prev {
+      left: 68%;
+      top: 21%;
+    }
+    .swiper-button-next {
+      right: 5%;
+      top: 21%;
     }
   }
  
 
   .blog{
     padding: $md 0;
-    .blog_cards{
+    &__cards{
       @include grid(repeat(1, 1fr), $sm);
     }
   }
   .contact{
-    .contact_head{
+    &__head{
       width: 80%;
     }
   }
   .footer{
-    .flex{
-      .f_text{
-        width: 45%;
-        h1{
-          font-size: $xl-1;
+    &__text{
+      width: 45%;
+      .logo{
+        font-size: $xl-1;
+        img{
+          height: $md;
         }
       }
-      .f_form{
-        width: 50%;
-      }
     }
-    .f_list:nth-child(4){
+    &__form{
+      width: 50%;
+    }
+   
+    &__list:nth-child(4){
       width: 50%;
      }
   }
+}
+
+@media(max-width:350px){
+  .carousels{
+    .carousel-team{
+      .arrow-left, .arrow-right{
+         top: 17%;
+      }
+    }
+  }
+  .carousel-testimonial{
+    padding: $xl-3 $xl-1 !important;
+  }
+  .footer{
+    .flex{
+      flex-direction: column;   
+    }
+    &__text{
+      width: 90%;
+    }
+    &__list:nth-child(4){
+      width: 90%;
+     }
+     &__form{
+      width: 90%;
+    }
+  }
+
 }

@@ -1,13 +1,15 @@
 
 
+
+
 let modal = document.querySelector('#registr');
 let login = document.querySelector('#login');
 let menu = document.querySelector('.navbar');
-let hamMenu = document. querySelector(".hamMenu");
+let burger = document. querySelector(".header__burger");
 let arrowTop = document.querySelector('#arrowTop');
+let buttons = document.querySelector('.navbar__buttons');
 function opened(arg){
     arg.classList.add ('show');
-    console.log(modal)
 }
 
 modal.addEventListener('click', function(event){
@@ -25,13 +27,13 @@ function closed(arg){
     arg.classList.remove ('show');
 }
 
-hamMenu.addEventListener('click', function(){
-    console.log(1);
+
+burger.addEventListener('click', function(){
     menu.classList.toggle('show');
-    if(hamMenu.innerHTML === '<i class="bi bi-x-lg"></i>'){
-        hamMenu.innerHTML = '<i class="bi bi-list"></i>';
+    if(burger.innerHTML === '<i class="bi bi-x-lg"></i>'){
+        burger.innerHTML = '<i class="bi bi-list"></i>';
     } else{
-        hamMenu.innerHTML = '<i class="bi bi-x-lg"></i>';
+        burger.innerHTML = '<i class="bi bi-x-lg"></i>';
     }
     } );
 
@@ -42,16 +44,30 @@ hamMenu.addEventListener('click', function(){
       window.addEventListener('scroll', function() {
         arrowTop.hidden = (pageYOffset < document.documentElement.clientHeight);
       });
+
+let form = document.forms.form;
+let email = form.elements.email;
+console.log(email);
+email.onblur = function() {
+  if (!email.value.includes('@')) { // не email
+   alert('Пожалуйста, введите правильный email.');
+  }
+};
+  
         
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
     spaceBetween: 10,
-    slidesPerView: 1.5,
+    slidesPerView: 1,
     
     // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
+    350: {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
+    },
     570: {
       slidesPerView: 2,
       spaceBetween: 20,
@@ -78,16 +94,34 @@ const swiper = new Swiper('.swiper', {
 
 const swiper2 = new Swiper('.carousel-testimonial', {
     loop: true,
-    spaceBetween: 100,
+    spaceBetween: 70,
     slidesPerView: 1,
+    breakpoints: {
+      // when window width is >= 570px
+      570: {
+        // slidesPerView: 1,
+        spaceBetween: 80,
+      },
+      // when window width is >= 960px
+      960: {
+        // slidesPerView: 1,
+        spaceBetween: 100,
+      },
+      // when window width is >= 1200px
+      1200: {
+        // slidesPerView: 1,
+        spaceBetween: 100,
+      }
+    },
+  
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.carousel-testimonial .swiper-button-next',
+        prevEl: '.carousel-testimonial .swiper-button-prev',
     },
 
     pagination: {
         el: '.swiper-pagination',
+        clickable: true,
     },
 })
-
 

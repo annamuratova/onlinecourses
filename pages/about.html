@@ -12,24 +12,26 @@
     <header class="header">
         <div class="container">
         <div class="flex">
-            <div class="logo"> 
-             <a href="../index.html"> <img src="../images/logo1.png" alt="logo"></a>
-            <img src="../images/logo.png" alt="logo">
+            <div class="header__logo"> 
+                <a href="../index.html"> <img src="../images/logo1.png" alt="logo"></a>
+                <img src="../images/logo.png" alt="logo">
             </div>
-            <nav class="navbar">
-                <a href="about.html" class="navbar_item" style="color: #FF3F3A;">About Us</a>
-                <a href="courses.html"  class="navbar_item">Courses</a>
-                <a href=""  class="navbar_item">Events</a>
-                <a href=""  class="navbar_item">Blog</a>
-                <a href=""  class="navbar_item">Contacts</a>
+            <nav class="navbar flex">
+                <div class="navbar__inner">
+                    <a href="about.html" class="navbar__item navbar__item--active">About Us</a>
+                    <a href="courses.html"  class="navbar__item">Courses</a>
+                    <a href=""  class="navbar__item">Events</a>
+                    <a href=""  class="navbar__item">Blog</a>
+                    <a href=""  class="navbar__item">Contacts</a>
+                </div>
+                <div class="navbar__buttons flex">
+                    <button class="like-button">Get consultation</button>
+                        <button class="navbar__button navbar__button--login" onclick="opened(login)"><i class="bi bi-person" style="font-size: 1.5rem;"></i>login</button>
+                        <button class="navbar__button" onclick="opened(modal)">Registr</button> 
+                </div>
             </nav>
-            <div class="header_buttons">
-                <button class="like_button">Get consultation</button>
-                    <i class="bi bi-person" style="font-size: 1.5rem;"></i>
-                    <button class="header_buttons__btn" onclick="opened(login)">login /</button>
-                    <button class="header_buttons__btn" onclick="opened(modal)">Registr</button> 
-            </div>
-            <button class="hamMenu"> <i class="bi bi-list"></i></button>
+           
+            <button class="header__burger"> <i class="bi bi-list"></i></button>
         </div>
     </div> 
     </header>
@@ -37,12 +39,12 @@
     <div class="container">
         <div class="about-main flex">
             <div class="about-main_left">
-                <p class="desc_text">About us</p>
+                <p class="desc-text">About us</p>
                 <h2 class="title">Createx Online School</h2>
                 <b>Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts.</b>
                 <p>We provide relevant approaches to online learning, internships and employment in the largest companies in the country. Our educational programs help you get a new specialty from scratch. During your studies, we will help you find a job. Check the courses and online events that we organise.</p>
                 <button class="btn">Explore events</button>
-                <button class="like_button">Explore events</button>
+                <button class="like-button">Explore events</button>
             </div>
             <div class="about-main_right"><img src="../images/illystration4.png" alt=""></div>
         </div>
@@ -64,7 +66,7 @@
             </div>
         </div>
         <div class="values">
-            <p class="desc_text">We always stand for</p>
+            <p class="desc-text">We always stand for</p>
             <h2 class="title">Our core values</h2>
             <div class="flex">
                 <div class="value">
@@ -94,7 +96,7 @@
         </div>
         <div class="about-cards">
             <div class="head">
-                <p class="desc_text">our main directions</p>
+                <p class="desc-text">our main directions</p>
                 <h2 class="title">What do we teach</h2>
             </div>
             <div class="cards-wrap">
@@ -151,7 +153,7 @@
         </div>
         <div class="process flex">
             <div class="process-content">
-                <p class="desc_text">Studying process</p>
+                <p class="desc-text">Studying process</p>
                 <h2 class="title">That’s how we do it</h2>
                 <div class="step">
                     <div class="circle"></div>
@@ -184,7 +186,7 @@
         </div>
         <div class="team">
             <div class="team-head">
-                <p class="desc_text">Best tutors are all here</p>
+                <p class="desc-text">Best tutors are all here</p>
                 <h2 class="title">Meet our team</h2>
             </div>
             <div class="team-grid">
@@ -306,11 +308,11 @@
     <div class="carousels">
         <div class="container">
             <div class="carousel-testimonial swiper">
-                <p class="desc_text">TESTIMONIALS</p>
+                <p class="desc-text">TESTIMONIALS</p>
                 <h2 class="title">What our students say</h2>
                 <div class="swiper-wrapper">
                     <div class="testimonial swiper-slide">
-                            <div class="testimonial_text flex">
+                            <div class="testimonial__text flex">
                                 <i class="bi bi-quote" style="font-size:25px;"></i>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
                             </div>
@@ -323,7 +325,7 @@
                             </div>
                     </div>
                     <div class="testimonial swiper-slide">
-                        <div class="testimonial_text flex">
+                        <div class="testimonial__text flex">
                             <i class="bi bi-quote" style="font-size:25px;"></i>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
                         </div>
@@ -337,7 +339,7 @@
                     
                     </div>
                     <div class="testimonial swiper-slide">
-                        <div class="testimonial_text flex">
+                        <div class="testimonial__text flex">
                             <i class="bi bi-quote" style="font-size:25px;"></i>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
                         </div>
@@ -351,7 +353,7 @@
                     
                     </div>
                     <div class="testimonial swiper-slide">
-                        <div class="testimonial_text flex">
+                        <div class="testimonial__text flex">
                             <i class="bi bi-quote" style="font-size:25px;"></i>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
                         </div>
@@ -372,72 +374,72 @@
         </div>
     </div>
     <div class="blog container">
-        <p class="desc_text">Our blog</p>
+        <p class="desc-text">Our blog</p>
         <h2 class="title">Latest posts</h2>
-        <div class="blog_cards">
-            <div class="blog_card">
+        <div class="blog__cards">
+            <div class="blog-card">
                 <div><img src="../images/image4.png" alt=""></div>
-                <div class="blog_card_body">
-                    <button class="blog_card_btn"><i class="bi bi-mic"></i> Podcast</button>
-                    <div class="blog_card_data">
+                <div class="blog-card__body">
+                    <button class="blog-card__btn"><i class="bi bi-mic"></i> Podcast</button>
+                    <div class="blog-card__data">
                         <span class="span">Marketing |</span>
                         <span class="span"><i class="bi bi-calendar4"></i> September 4, 2020</span>
                         <span class="span">| <i class="bi bi-clock"></i> 36 min</span>
                     </div>
-                    <b class="blog_card_title">What is traffic arbitrage and does it really make money?</b>
+                    <b class="blog--title">What is traffic arbitrage and does it really make money?</b>
                     <p>Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
-                    <button class="blog_card_link">Listen </button>
+                    <button class="blog--link">Listen </button>
                 </div>
             </div>
-            <div class="blog_card">
+            <div class="blog-card">
                 <div><img src="../images/image4.png" alt=""></div>
-                <div class="blog_card_body">
-                    <button class="blog_card_btn"><i class="bi bi-mic"></i> Podcast</button>
-                    <div class="blog_card_data">
+                <div class="blog-card__body">
+                    <button class="blog-card__btn"><i class="bi bi-mic"></i> Podcast</button>
+                    <div class="blog-card__data">
                         <span class="span">Marketing |</span>
                         <span class="span"><i class="bi bi-calendar4"></i> September 4, 2020</span>
                         <span class="span">| <i class="bi bi-clock"></i> 36 min</span>
                     </div>
-                    <b class="blog_card_title">What is traffic arbitrage and does it really make money?</b>
+                    <b class="blog--title">What is traffic arbitrage and does it really make money?</b>
                     <p>Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
-                    <button class="blog_card_link">Listen </button>
+                    <button class="blog--link">Listen </button>
                 </div>
             </div>
-            <div class="blog_card">
+            <div class="blog-card">
                 <div><img src="../images/image4.png" alt=""></div>
-                <div class="blog_card_body">
-                    <button class="blog_card_btn"><i class="bi bi-mic"></i> Podcast</button>
-                    <div class="blog_card_data">
+                <div class="blog--card__body">
+                    <button class="blog-card__btn"><i class="bi bi-mic"></i> Podcast</button>
+                    <div class="blog-card__data">
                         <span class="span">Marketing |</span>
                         <span class="span"><i class="bi bi-calendar4"></i> September 4, 2020</span>
                         <span class="span">| <i class="bi bi-clock"></i> 36 min</span>
                     </div>
-                    <b class="blog_card_title">What is traffic arbitrage and does it really make money?</b>
+                    <b class="blog--title">What is traffic arbitrage and does it really make money?</b>
                     <p>Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
-                    <button class="blog_card_link">Listen </button>
+                    <button class="blog--link">Listen </button>
                 </div>
             </div>
         </div>
     </div>
     <div class="contact">
         <div class="container">
-            <div class="contact_head">
-            <p class="desc_text">Don’t miss anything</p>
+            <div class="contact__head">
+            <p class="desc-text">Don’t miss anything</p>
             <h2 class="title">Subscribe to the Createx School announcements</h2>
             </div>
-            <form action="" class="contact_form">
-                <input type="text" class="my_input" placeholder="Your working email">
-                <button class="like_button">Subscribe</button>
+            <form action="" class="contact__form">
+                <input type="text" class="my-input" placeholder="Your working email">
+                <button class="like-button">Subscribe</button>
             </form>
         </div>
-        <div class="flex">
+        <div class="contact-img flex">
             <img src="../images/illuetration3.png" alt="">
             <img src="../images/illuetration3.png" alt="">
         </div>
     </div>
     <footer class="footer">
         <div class="container flex">
-            <div class="f_text">
+            <div class="footer__text">
                 <h1 class="logo">  <a href="../index.html"> CREATE</a> <img src="../images/logo.png" alt=""></h1>
                 <p>Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country. </p>
                 <i class="bi bi-facebook"></i>
@@ -447,7 +449,7 @@
                 <i class="bi bi-instagram"></i>
                 <i class="bi bi-linkedin"></i>
             </div>
-            <ul class="f_list">
+            <ul class="footer__lists">
                 <li>SITE MAP</li>x`
                 <li> <a href="">About Us </a></li>
                 <li> <a href="">Courses</a></li>
@@ -455,7 +457,7 @@
                 <li> <a href="">Blog</a></li>
                 <li> <a href="">Contacts</a></li>    
             </ul>
-            <ul class="f_list">
+            <ul class="footer__lists">
                 <li>COURSES</li>
                 <li><a href="">Marketing</a></li>
                 <li> <a href="">Management</a></li>
@@ -463,15 +465,15 @@
                 <li> <a href="">Design</a></li>
                 <li> <a href="">Development</a></li>
             </ul>
-            <ul class="f_list">
+            <ul class="footer__lists">
             <li>CONTACT US</li>
             <li><i class="bi bi-telephone"></i> (405) 555-0128</li>
             <li><i class="bi bi-envelope"></i> hello@createx.com</li>    
             </ul>
-            <form action="" class="f_form">
+            <form action="" class="footer__form">
                 <h4>SIGN UP TO OUR NEWSLETTER</h4>
-                <input type="text" class="my_input" placeholder="Email address">
-                <button class="f_form_button">
+                <input type="text" class="my-input" placeholder="Email address">
+                <button class="footer-button">
                 <i class="bi bi-arrow-right"></i>
             </button>
                 <p>*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.</p>
@@ -486,17 +488,17 @@
                 <span class="span">Registration takes less than a minute but gives you full control over your studying.</span>
             </div>
             <label for="name">Full Name</label>
-            <input type="text" class="my_input" name="name" placeholder="You full name">
+            <input type="text" class="my-input" name="name" placeholder="You full name">
             <label for="email">Email</label>
-            <input type="text" class="my_input"  name="email" placeholder="Your working email">
+            <input type="text" class="my-input"  name="email" placeholder="Your working email">
             <label for="password">Password</label>
-            <input type="password" class="my_input" name="password" placeholder="Password">
+            <input type="password" class="my-input" name="password" placeholder="Password">
             <label for="confirm">Confirm Password</label>
-            <input type="password" class="my_input" name="confirm">
-            <div><input type=”checkbox”>
+            <input type="password" class="my-input" name="confirm">
+            <div><input type='checkbox'>
             <label for="">Remember me</label>
         </div>
-            <button class="like_button">Sign up</button>
+            <button class="like-button">Sign up</button>
             <span class="span">Already have an account? <a href="">sign in</a></span>
         </form>
     </div>
@@ -508,19 +510,20 @@
                 <span class="span">Sign in to your account using email and password provided during registration.</span>
             </div>
             <label for="email">Email</label>
-            <input type="text" class="my_input"  name="email" placeholder="Your working email">
+            <input type="text" class="my-input"  name="email" placeholder="Your working email">
             <label for="password">Password</label>
-            <input type="password" class="my_input" name="password" placeholder="Password">
+            <input type="password" class="my-input" name="password" placeholder="Password">
             <div class="flex">
-                <div><input type=”checkbox”>
+                <div><input type='checkbox'>
                     <label for="">Keep me signed in</label>
                 </div>
                 <a href="">Forgot password?</a>
             </div>
-            <button class="like_button">Sign in</button> 
+            <button class="like-button">Sign in</button> 
             <span class="span">Don't have an account? <a href="">sign up</a></span> 
         </form>
     </div>
+    <div id="arrowTop" hidden></div>
     <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
     <script src="../index.js"></script>
 </body>

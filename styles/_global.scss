@@ -29,10 +29,10 @@ $shadow:0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(
   @mixin color(){
     color: #ff4242;
   }
-  @mixin flex($direction, $justify){
+  @mixin flex($direction, $gap){
     display:flex;
     flex-direction: $direction;
-    justify-content: $justify;
+    gap: $gap;
   }
 
   *{
@@ -46,6 +46,7 @@ body {
     box-sizing: border-box;
   }
 .container{
+   width: 90%;
     max-width:1230px;
     margin: 0 auto; 
 }
@@ -58,7 +59,7 @@ button{
   cursor: pointer;
 }
 
-.like_button{
+.like-button{
     background: $gradient;
     border:none;
     padding: $md $xl-4;
@@ -105,7 +106,7 @@ p{
       color: $text-color;
       margin-top: 0;
 }
-.desc_text{
+.desc-text{
     font-size: $xl-2;
       font-weight: 600;
       color: $text-color;
@@ -123,7 +124,7 @@ input:focus{
  box-shadow:inset $shadow;
  outline: 3px solid rgba(0, 0, 255, 0.504);
 }
-.my_input{
+.my-input{
   border: none;
   padding: $md;
   width: 200px;
@@ -161,13 +162,13 @@ input:focus{
     margin: $md 0;
     @include flex(column, strech)
   }
-  .my_input{
+  .my-input{
     width: 100%;
     border: 1px solid;
     padding: $sm $xl-2;
     margin: $sm 0;
   }
-  .like_button{
+  .like-button{
     margin: $xl-2 0;
   }
   a{
@@ -197,8 +198,11 @@ input:focus{
     width: 90%;
     // padding:0 5px;
   }
-  .like_button{
+  .like-button{
     padding: $sm $xl-1;
+  }
+  .btn{
+    padding: 9px $xl-2;
   }
 }
 
@@ -206,7 +210,7 @@ input:focus{
   .flex{
     flex-wrap: wrap;
   }
-  .my_input{
+  .my-input{
     width: 100px;
   }
 }
@@ -215,7 +219,7 @@ input:focus{
   .title{
     font-size: $xl-3;
   }
-  .desc_text{
+  .desc-text{
     font-size: $xl-1;
   }
   .btn{
