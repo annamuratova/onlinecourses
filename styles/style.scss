@@ -200,10 +200,10 @@
     @include flex (row, $xll);
     align-items: center;
     .flex{
-      margin: 0;
+      margin: 0 !important;
     }
   }
-  .flex{
+  &__inner{
     margin: $xll-1 0;
     .benefits__left{
       padding-right: $xll-1;
@@ -298,9 +298,11 @@
     img{
       background-color: #FFCF2D;
     }
+  
     b{
       display: block;
     }
+  
   }
   .swiper-button-next:after,
   .swiper-button-prev:after{
@@ -465,6 +467,8 @@
   }
   .flex{
     align-items: flex-start;
+    gap: $sm;
+    flex-wrap: wrap;
   }
   &__text{
     width: 25%;
@@ -547,13 +551,13 @@
   
  .benefits{
    padding: $xl-3 $xl-1;
-  .flex{
+  &__inner{
   img{
     width: 100%;
   }
-  &__left{
+  .benefits__left{
      width: 50%;
-     padding-right: $sm;
+     padding-right: $md;
   }
 }
 &__items{
@@ -619,8 +623,13 @@
   }
   .benefits{
     &__items{
-      gap: $xll;
+      gap: $xl-1;
       flex-wrap: wrap;
+    }
+    &__inner{
+      .benefits__left{
+        width: 100%;
+      }
     }
   }
   .carousels{
@@ -747,7 +756,7 @@
     }
   }
   .carousel-testimonial{
-    padding: $xl-3 !important;
+    padding:$xl-3 $sm !important;
     .swiper-button-prev {
       left: 68%;
       top: 21%;

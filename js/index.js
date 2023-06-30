@@ -45,15 +45,7 @@ burger.addEventListener('click', function(){
         arrowTop.hidden = (pageYOffset < document.documentElement.clientHeight);
       });
 
-let form = document.forms.form;
-let email = form.elements.email;
-console.log(email);
-email.onblur = function() {
-  if (!email.value.includes('@')) { // не email
-   alert('Пожалуйста, введите правильный email.');
-  }
-};
-  
+
         
 const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -94,7 +86,7 @@ const swiper = new Swiper('.swiper', {
 
 const swiper2 = new Swiper('.carousel-testimonial', {
     loop: true,
-    spaceBetween: 70,
+    spaceBetween: 80,
     slidesPerView: 1,
     breakpoints: {
       // when window width is >= 570px

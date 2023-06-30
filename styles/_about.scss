@@ -3,7 +3,7 @@
 .about-main{
     padding-bottom: $xll;
     padding-top: 150px;
-    .about-main_left{
+    &__left{
         width: 50%;
         padding-left:$xll;
             p{
@@ -11,7 +11,7 @@
                 color: $muted;
             }
      }
-     .about-main_right{
+     &__right{
         img{
             width: 100%;
         }
@@ -20,7 +20,7 @@
 
 .about-statistics{
     padding: $xll 0;
-    .about-st_left{
+    &__left{
         width: 70%;
         .play{
             margin: $sm;
@@ -36,9 +36,9 @@
             width: 100%;
         }
     }
-    .about-st_right{
+    &__right{
         .about-list{
-            li{
+            &__item{
                 display: flex;
                 align-items: center;
                 margin: $xl-4;
@@ -62,10 +62,10 @@
         padding: $xl-2;
         @include flex(column, space-between);
         align-items: center;
-        img{
+        &__img{
             width: 10%;
         }
-        b{
+        &__title{
             margin: $sm 0;
         }
     }
@@ -81,7 +81,7 @@
     .head{
         text-align: center;
     }
-    .cards-wrap{
+    &__inner{
         @include grid(repeat(3, 1fr), $xl-3);
         .card{
             border: 1px solid $secondary;
@@ -90,7 +90,7 @@
             img{
                 width: 100%;
             }
-            .card_text{
+            &__text{
                 padding: $xl-2;
                 p{
                     margin: $sm 0;
@@ -102,16 +102,16 @@
                     color: $white;
                     background-color: #03CEA4;
                 }
-                .btn_management{
+                .btn-management{
                     background-color:#5A87FC;
                 }
-                .btn_design{
+                .btn-design{
                     background-color: $primary;
                 }
-                .btn_hr{
+                .btn-hr{
                     background-color: #F89828;
                 }
-                .btn_dev{
+                .btn-dev{
                     background-color: #5A87FC;
                 }
                 b:hover{
@@ -119,7 +119,7 @@
                 }
             }
         }
-        .card:last-child{
+        .card-new{
             background-color: #f4f5f7;
             padding: 124px $xll-1;
             text-align: center;
@@ -130,28 +130,28 @@
 
 .process{
     padding: $xll-1 0;
-    .process-content{
+    &__content{
         width: 50%;
-        .step{
-            padding: $xl-1;
-            color: $text-color;
-            border-left: 1px solid $muted;
-            position: relative;
-            h4{
-                margin: $sm 0;
-            }
-            .circle{
-                width: $sm;
-                height: $sm;
-                background-color: $primary;
-                border-radius: 50%;
-                position: absolute;
-                left:-1%;
-                top: 0;
-            }
+    }
+    &__step{
+        padding: $xl-1;
+        color: $text-color;
+        border-left: 1px solid $muted;
+        position: relative;
+        h4{
+            margin: $sm 0;
+        }
+        .circle{
+            width: $sm;
+            height: $sm;
+            background-color: $primary;
+            border-radius: 50%;
+            position: absolute;
+            left:-1%;
+            top: 0;
         }
     }
-    .process-img{
+    &__img{
         img{
             width: 100%;
         }
@@ -163,8 +163,8 @@
     padding: $xll 0;
     .team-grid{
         @include grid(repeat(4, 1fr), $xl-3);
-        .team-grid_item{
-            .team_img{
+        &__item{
+            .team-img{
                 padding: 10px 10px 0 10px;
                 position: relative;
                 background-color: #FFCF2D;
@@ -190,7 +190,7 @@
                     }
                 }
              }
-             .team_img:hover .cosial{
+             .team-img:hover .cosial{
                  display: block;
              }
         }
@@ -199,17 +199,17 @@
 
 @media (max-width:992px){
     .about-main{
-        .about-main_left{
+        &__left{
             padding-left:$xl-4;
         }
     }
     .about-statistics{
-        .about-st_left{
+        &__left{
             width: 60%;
         }
-        .about-st_right{
+        &__right{
             .about-list{
-                li{
+                &__item{
                     margin: $xl-2;
                     font-weight: 400;
                     b{
@@ -230,29 +230,32 @@
 
 @media (max-width:767px){
     .about-main{
-        .about-main_left{
+        &__left{
            width: 90%;
            margin-bottom:$xll ;
         }
     }
     .about-statistics{
         padding: $xl-1;
-        .about-st_left{
-            width: 90%;
+        &__left{
+            width: 100%;
+        }
+        &__right{
+            width: 100%;
         }
     }
     .about-cards{
-        .cards-wrap{
+        &__inner{
             @include grid(repeat(2, 1fr), $xl-1)
         }
     }
     .process{
-        .process-content{
+        &__content{
             width: 100%;
             margin: $xl-1 0;
-            .step{
-                padding:$md;
-            }
+        }
+        &__step{
+            padding:$md;
         }
     }
     .team{
@@ -263,8 +266,11 @@
 }
 
 @media(max-width:576px){
+    .about-statistics{
+        padding: 0;
+    }
     .about-cards{
-        .cards-wrap{
+        &__inner{
             @include grid(repeat(1, 1fr), $xl-1)
         }
     }

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
     <header class="header">
@@ -38,7 +38,7 @@
    
     <div class="container">
         <div class="about-main flex">
-            <div class="about-main_left">
+            <div class="about-main__left">
                 <p class="desc-text">About us</p>
                 <h2 class="title">Createx Online School</h2>
                 <b>Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts.</b>
@@ -46,22 +46,22 @@
                 <button class="btn">Explore events</button>
                 <button class="like-button">Explore events</button>
             </div>
-            <div class="about-main_right"><img src="../images/illystration4.png" alt=""></div>
+            <div class="about-main__right"><img src="../images/illystration4.png" alt=""></div>
         </div>
         <div class="about-statistics flex">
-            <div class="about-st_left">
+            <div class="about-statistics__left">
                 <button class="play">
                     <i class="bi bi-play-circle-fill" style="font-size: 1.5rem; color: red;"></i>
                     Watch Video   
                 </button>
                 <img src="../images/aboutimg.png" alt="">
             </div>
-            <div class="about-st_right">
+            <div class="about-statistics__right">
                 <ul class="about-list">
-                    <li><b>1200</b> students graduated</li>
-                    <li><b>84</b> completed courses</li>
-                    <li><b>16</b> qualified tutors</li>
-                    <li><b>5</b> years of experience</li>
+                    <li class="about-list__item"><b>1200</b> students graduated</li>
+                    <li class="about-list__item"><b>84</b> completed courses</li>
+                    <li class="about-list__item"><b>16</b> qualified tutors</li>
+                    <li class="about-list__item"><b>5</b> years of experience</li>
                 </ul>
             </div>
         </div>
@@ -70,27 +70,27 @@
             <h2 class="title">Our core values</h2>
             <div class="flex">
                 <div class="value">
-                    <img src="../images/ic-structure.png" alt="">
-                    <b>Structured Approach</b>
-                    <p>Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris. </p>
+                    <img class="value__img" src="../images/ic-structure.png" alt="">
+                    <b class="value__title">Structured Approach</b>
+                    <p class="value__text">Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris. </p>
                 </div>
                 <div class="vertical-line"></div>
                 <div class="value">
-                    <img src="../images/Vector (4).png" alt="">
-                    <b>Efficiency</b>
-                    <p>Viverra scelerisque consequat net. Adipisicing esse consequat. </p>
+                    <img class="value__img" src="../images/Vector (4).png" alt="">
+                    <b class="value__title">Efficiency</b>
+                    <p class="value__text">Viverra scelerisque consequat net. Adipisicing esse consequat. </p>
                 </div>
                 <div class="vertical-line"></div>
                 <div class="value">
-                    <img src="../images/ic-structure.png" alt="">
-                    <b>Structured Approach</b>
-                    <p>Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris. </p>
+                    <img class="value__img" src="../images/ic-structure.png" alt="">
+                    <b class="value__title">Structured Approach</b>
+                    <p class="value__text">Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris. </p>
                 </div>
                 <div class="vertical-line"></div>
                 <div class="value">
-                    <img src="../images/Vector (4).png" alt="">
-                    <b>Efficiency</b>
-                    <p>Viverra scelerisque consequat net. Adipisicing esse consequat. </p>
+                    <img class="value__img" src="../images/Vector (4).png" alt="">
+                    <b class="value__title">Efficiency</b>
+                    <p class="value__text">Viverra scelerisque consequat net. Adipisicing esse consequat. </p>
                 </div>
             </div>
         </div>
@@ -99,88 +99,83 @@
                 <p class="desc-text">our main directions</p>
                 <h2 class="title">What do we teach</h2>
             </div>
-            <div class="cards-wrap">
+            <div class="about-cards__inner">
                 <div class="card">
                     <img src="../images/aboutimg1.png" alt="">
-                    <div class="card_text">
+                    <div class="card__text">
                         <button>Marketing</button>
                         <p>Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
-                        <b>Check courses</b>
-                        <i class="bi bi-arrow-right" style="color: #FF3F3A;"></i>
+                        <a href="#"><b>Check courses</b><i class="bi bi-arrow-right" style="color: #FF3F3A;"></i></a>
                 </div>
                 </div>
                 <div class="card">
                     <img src="../images/aboutimg2.png" alt="">
-                <div class="card_text">
-                    <button class="btn_management">Management</button>
+                <div class="card__text">
+                    <button class="btn-management">Management</button>
                     <p>Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
-                    <b>Check courses</b>
-                    <i class="bi bi-arrow-right" style="color: #FF3F3A;"></i>
+                    <a href="#"><b>Check courses</b><i class="bi bi-arrow-right" style="color: #FF3F3A;"></i></a>
                 </div>
                 </div>
                 <div class="card">
                     <img src="../images/aboutimg1.png" alt="">
-                    <div class="card_text">
-                        <button class="btn_hr">HR & Recruting</button>
+                    <div class="card__text">
+                        <button class="btn-hr">HR & Recruting</button>
                         <p>Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
-                        <b>Check courses</b>
-                        <i class="bi bi-arrow-right" style="color: #FF3F3A;"></i>
+                        <a href="#"> <b>Check courses</b><i class="bi bi-arrow-right" style="color: #FF3F3A;"></i></a>
                     </div>
                 </div>
                 <div class="card">
                     <img src="../images/aboutimg2.png" alt="">
-                    <div class="card_text">
-                        <button class="btn_design">Design</button>
+                    <div class="card__text">
+                        <button class="btn-design">Design</button>
                         <p>Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
-                        <b>Check courses</b>
-                        <i class="bi bi-arrow-right" style="color: #FF3F3A;"></i>
+                        <a href="#"> <b>Check courses</b><i class="bi bi-arrow-right" style="color: #FF3F3A;"></i></a>
                     </div>
                 </div>
                 <div class="card">
                     <img src="../images/ab.png" alt="">
-                    <div class="card_text">
-                        <button class="btn_dev">Development</button>
+                    <div class="card__text">
+                        <button class="btn-dev">Development</button>
                         <p>Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
-                        <b>Check courses</b>
-                        <i class="bi bi-arrow-right" style="color: #FF3F3A;"></i>
+                        <a href="#"> <b>Check courses</b><i class="bi bi-arrow-right" style="color: #FF3F3A;"></i></a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-new">
                     <p>New studying program coming soon...</p>
                 </div>
                
             </div>
         </div>
         <div class="process flex">
-            <div class="process-content">
+            <div class="process__content">
                 <p class="desc-text">Studying process</p>
                 <h2 class="title">That’s how we do it</h2>
-                <div class="step">
+                <div class="process__step">
                     <div class="circle"></div>
                     <span>STEP 1</span>
                     <h4>Watching online video lectures</h5>
                      <p>Aliquam turpis viverra quam sit interdum blandit posuere pellentesque. Nisl, imperdiet gravida massa neque.</p>
                 </div>
-                <div class="step">
+                <div class="process__step">
                     <div class="circle"></div>
                     <span>STEP 2</span>
                     <h4>Passing test</h4>
                     <p>Facilisis pellentesque quis accumsan ultricies. Eu egestas eget feugiat lacus, amet, sollicitudin egestas laoreet etiam. </p>
                 </div>
-                <div class="step">
+                <div class="process__step">
                     <div class="circle"></div>
                     <span>STEP 3</span>
                     <h4>Curator’s feedback</h4>
                     <p>Eget amet, enim pharetra leo egestas nisi, odio imperdiet facilisis. Aliquet orci varius volutpat egestas facilisi lobortis. </p>
                 </div>
-                <div class="step">
+                <div class="process__step">
                     <div class="circle"></div>
                     <span>STEP 4</span>
                     <h4>Corrections if needed</h4>
                     <p>Non tempor pulvinar tincidunt aliquam. Placerat ultricies malesuada dui auctor.</p>
                 </div>
             </div>
-            <div class="process-img">
+            <div class="process__img">
                 <img src="../images/illustration5.png" alt="">
             </div>
         </div>
@@ -190,112 +185,112 @@
                 <h2 class="title">Meet our team</h2>
             </div>
             <div class="team-grid">
-                <div class="team-grid_item">
-                    <div class="team_img">
+                <div class="team-grid__item">
+                    <div class="team-img">
                         <img src="../images/image2.png" alt="">
                         <div class="cosial">
                             <div class="icons">
-                                <i class="bi bi-facebook" style="color: white;"></i>
-                                <i class="bi bi-instagram" style="color: white;"></i>
-                                <i class="bi bi-linkedin" style="color: white;"></i>
+                                <a class="icons__link" href="#"><i class="bi bi-facebook" style="color: white;"></i></a>
+                                <a class="icons__link" href="#"><i class="bi bi-instagram" style="color: white;"></i></a>
+                                 <a class="icons__link" href="#"><i class="bi bi-linkedin" style="color: white;"></i></a>
                             </div>
                         </div>
                     </div>
                     <b>Dianne Russell</b>
                     <p>Founder and CEO</p>
                 </div>
-                <div class="team-grid_item">
-                <div class="team_img">
+                <div class="team-grid__item">
+                <div class="team-img">
                     <img src="../images/image3.png" alt="">
                     <div class="cosial">
                         <div class="icons">
-                            <i class="bi bi-facebook" style="color: white;"></i>
-                            <i class="bi bi-instagram" style="color: white;"></i>
-                            <i class="bi bi-linkedin" style="color: white;"></i>
+                            <a class="icons__link" href="#"><i class="bi bi-facebook" style="color: white;"></i></a>
+                            <a class="icons__link" href="#"><i class="bi bi-instagram" style="color: white;"></i></a>
+                             <a class="icons__link" href="#"><i class="bi bi-linkedin" style="color: white;"></i></a>
                         </div>
                     </div>
                 </div>
                     <b>Marvin McKinney</b>
                     <p>PM, Curator of Management Course</p>
                 </div>
-                <div class="team-grid_item">
-                    <div class="team_img">
+                <div class="team-grid__item">
+                    <div class="team-img">
                         <img src="../images/image2.png" alt="">
                         <div class="cosial">
                             <div class="icons">
-                                <i class="bi bi-facebook" style="color: white;"></i>
-                                <i class="bi bi-instagram" style="color: white;"></i>
-                                <i class="bi bi-linkedin" style="color: white;"></i>
+                                <a class="icons__link" href="#"><i class="bi bi-facebook" style="color: white;"></i></a>
+                                <a class="icons__link" href="#"><i class="bi bi-instagram" style="color: white;"></i></a>
+                                 <a class="icons__link" href="#"><i class="bi bi-linkedin" style="color: white;"></i></a>
                             </div>
                         </div>
                     </div>
                     <b>Dianne Russell</b>
                     <p>Founder and CEO</p>
                 </div>
-                <div class="team-grid_item">
-                    <div class="team_img">
+                <div class="team-grid__item">
+                    <div class="team-img">
                         <img src="../images/image3.png" alt="">
                         <div class="cosial">
                             <div class="icons">
-                                <i class="bi bi-facebook" style="color: white;"></i>
-                                <i class="bi bi-instagram" style="color: white;"></i>
-                                <i class="bi bi-linkedin" style="color: white;"></i>
+                                <a class="icons__link" href="#"><i class="bi bi-facebook" style="color: white;"></i></a>
+                                <a class="icons__link" href="#"><i class="bi bi-instagram" style="color: white;"></i></a>
+                                 <a class="icons__link" href="#"><i class="bi bi-linkedin" style="color: white;"></i></a>
                             </div>
                         </div>
                     </div>
                     <b>Marvin McKinney</b>
                     <p>PM, Curator of Management Course</p>
                 </div>
-                <div class="team-grid_item">
-                    <div class="team_img">
+                <div class="team-grid__item">
+                    <div class="team-img">
                         <img src="../images/image2.png" alt="">
                         <div class="cosial">
                             <div class="icons">
-                                <i class="bi bi-facebook" style="color: white;"></i>
-                                <i class="bi bi-instagram" style="color: white;"></i>
-                                <i class="bi bi-linkedin" style="color: white;"></i>
+                                <a class="icons__link" href="#"><i class="bi bi-facebook" style="color: white;"></i></a>
+                                <a class="icons__link" href="#"><i class="bi bi-instagram" style="color: white;"></i></a>
+                                 <a class="icons__link" href="#"><i class="bi bi-linkedin" style="color: white;"></i></a>
                             </div>
                         </div>
                     </div>
                     <b>Dianne Russell</b>
                     <p>Founder and CEO</p>
                 </div>
-                <div class="team-grid_item">
-                    <div class="team_img">
+                <div class="team-grid__item">
+                    <div class="team-img">
                         <img src="../images/image3.png" alt="">
                         <div class="cosial">
                             <div class="icons">
-                                <i class="bi bi-facebook" style="color: white;"></i>
-                                <i class="bi bi-instagram" style="color: white;"></i>
-                                <i class="bi bi-linkedin" style="color: white;"></i>
+                                <a class="icons__link" href="#"><i class="bi bi-facebook" style="color: white;"></i></a>
+                                <a class="icons__link" href="#"><i class="bi bi-instagram" style="color: white;"></i></a>
+                                 <a class="icons__link" href="#"><i class="bi bi-linkedin" style="color: white;"></i></a>
                             </div>
                         </div>
                     </div>
                     <b>Marvin McKinney</b>
                     <p>PM, Curator of Management Course</p>
                 </div>
-                <div class="team-grid_item">
-                    <div class="team_img">
+                <div class="team-grid__item">
+                    <div class="team-img">
                         <img src="../images/image2.png" alt="">
                         <div class="cosial">
                             <div class="icons">
-                                <i class="bi bi-facebook" style="color: white;"></i>
-                                <i class="bi bi-instagram" style="color: white;"></i>
-                                <i class="bi bi-linkedin" style="color: white;"></i>
+                                <a class="icons__link" href="#"><i class="bi bi-facebook" style="color: white;"></i></a>
+                                <a class="icons__link" href="#"><i class="bi bi-instagram" style="color: white;"></i></a>
+                                 <a class="icons__link" href="#"><i class="bi bi-linkedin" style="color: white;"></i></a>
                             </div>
                         </div>
                     </div>
                     <b>Dianne Russell</b>
                     <p>Founder and CEO</p>
                 </div>
-                <div class="team-grid_item">
-                    <div class="team_img">
+                <div class="team-grid__item">
+                    <div class="team-img">
                         <img src="../images/image3.png" alt="">
                         <div class="cosial">
                             <div class="icons">
-                                <i class="bi bi-facebook" style="color: white;"></i>
-                                <i class="bi bi-instagram" style="color: white;"></i>
-                                <i class="bi bi-linkedin" style="color: white;"></i>
+                                <a class="icons__link" href="#"><i class="bi bi-facebook" style="color: white;"></i></a>
+                                <a class="icons__link" href="#"><i class="bi bi-instagram" style="color: white;"></i></a>
+                                 <a class="icons__link" href="#"><i class="bi bi-linkedin" style="color: white;"></i></a>
                             </div>
                         </div>
                     </div>
@@ -442,33 +437,33 @@
             <div class="footer__text">
                 <h1 class="logo">  <a href="../index.html"> CREATE</a> <img src="../images/logo.png" alt=""></h1>
                 <p>Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country. </p>
-                <i class="bi bi-facebook"></i>
-                <i class="bi bi-twitter"></i>
-                <i class="bi bi-youtube"></i>
-                <i class="bi bi-send-fill"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-linkedin"></i>
+                <a href="#"<i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-send-fill"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
             </div>
             <ul class="footer__lists">
-                <li>SITE MAP</li>x`
-                <li> <a href="">About Us </a></li>
-                <li> <a href="">Courses</a></li>
-                <li> <a href="">Events</a></li>
-                <li> <a href="">Blog</a></li>
-                <li> <a href="">Contacts</a></li>    
+                <li>SITE MAP</li>
+                <li> <a href="#">About Us </a></li>
+                <li> <a href="#">Courses</a></li>
+                <li> <a href="#">Events</a></li>
+                <li> <a href="#">Blog</a></li>
+                <li> <a href="#">Contacts</a></li>    
             </ul>
             <ul class="footer__lists">
                 <li>COURSES</li>
-                <li><a href="">Marketing</a></li>
-                <li> <a href="">Management</a></li>
-                <li> <a href="">HR & Recruting</a></li>
-                <li> <a href="">Design</a></li>
-                <li> <a href="">Development</a></li>
+                <li><a href="#">Marketing</a></li>
+                <li> <a href="#">Management</a></li>
+                <li> <a href="#">HR & Recruting</a></li>
+                <li> <a href="#">Design</a></li>
+                <li> <a href="#">Development</a></li>
             </ul>
             <ul class="footer__lists">
             <li>CONTACT US</li>
-            <li><i class="bi bi-telephone"></i> (405) 555-0128</li>
-            <li><i class="bi bi-envelope"></i> hello@createx.com</li>    
+            <li><i class="bi bi-telephone"></i> <a href="tel:998887909011">+998887909011</a></li>
+            <li><i class="bi bi-envelope"></i><a href="mailto:durdonannamuratova@gmail.com">durdonannamuratova@gmail.com</a></li>    
             </ul>
             <form action="" class="footer__form">
                 <h4>SIGN UP TO OUR NEWSLETTER</h4>
@@ -524,7 +519,7 @@
         </form>
     </div>
     <div id="arrowTop" hidden></div>
-    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
-    <script src="../index.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>

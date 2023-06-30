@@ -168,6 +168,10 @@ input:focus{
     padding: $sm $xl-2;
     margin: $sm 0;
   }
+  .error{
+    font-size: $md;
+    color: $primary;
+  }
   .like-button{
     margin: $xl-2 0;
   }
